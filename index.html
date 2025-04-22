@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Mobile Detailing | Premium Car Care</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            background-color: white;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2ecc71;
+            margin-top: 15px;
+        }
+        
+        /* Booking Section */
+        .booking {
+            padding: 60px 0;
+            background-color: #f5f5f5;
+        }
+        #booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background-color: white;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .testimonial-card:before {
+            content: '"';
+            font-size: 5rem;
+            color: rgba(0,0,0,0.1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .author {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        .footer-section p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .footer-icon {
+            margin-right: 10px;
+            color: #e74c3c;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Elite Mobile Detailing</h1>
+            <p>Premium car care delivered to your doorstep</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Your Car Deserves The Best</h2>
+            <p>Professional detailing services at your home or office</p>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Basic Wash</h3>
+                    <p>Exterior wash, wheel cleaning, interior vacuum, and window cleaning for a fresh look.</p>
+                    <span class="price">$50</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Premium Detail</h3>
+                    <p>Full exterior and interior deep clean, wax, leather conditioning, and odor removal.</p>
+                    <span class="price">$120</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Ceramic Coating</h3>
+                    <p>Premium protective coating with 2-year warranty to keep your car looking new.</p>
+                    <span class="price">$300</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Detail</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="car-type">Vehicle Type</label>
+                    <select id="car-type" required>
+                        <option value="">Select your vehicle</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV/CrossOver</option>
+                        <option value="truck">Truck</option>
+                        <option value="van">Van/Minivan</option>
+                        <option value="luxury">Luxury Vehicle</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service</label>
+                    <select id="service" required>
+                        <option value="">Select a service</option>
+                        <option value="basic">Basic Wash - $50</option>
+                        <option value="premium">Premium Detail - $120</option>
+                        <option value="ceramic">Ceramic Coating - $300</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Appointment Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <select id="time" required>
+                        <option value="">Select time</option>
+                        <option value="9am">9:00 AM</option>
+                        <option value="11am">11:00 AM</option>
+                        <option value="1pm">1:00 PM</option>
+                        <option value="3pm">3:00 PM</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Service Address</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"My car looks brand new! The detailer was professional and thorough. Will definitely book again!"</p>
+                    <span class="author">- Sarah J.</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Convenient, affordable, and excellent results. They came to my office while I was working - perfect service!"</p>
+                    <span class="author">- Michael T.</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The ceramic coating was worth every penny. My car repels water and dirt like magic. Highly recommend!"</p>
+                    <span class="author">- David L.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><span class="footer-icon">📞</span> (555) 123-4567</p>
+                    <p><span class="footer-icon">✉️</span> info@elitedetailing.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Service Area</h3>
+                    <p>Serving all of [Your City] and surrounding areas within 20 miles</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <p>Monday - Saturday: 9am - 5pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Elite Mobile Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').setAttribute('min', today);
+            
+            // Form submission handler
+            document.getElementById('booking-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const formData = {
+                    carType: document.getElementById('car-type').value,
+                    service: document.getElementById('service').value,
+                    date: document.getElementById('date').value,
+                    time: document.getElementById('time').value,
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    address: document.getElementById('address').value
+                };
+                
+                // Calculate price
+                let price = 0;
+                if (formData.service.includes('Basic')) price = 50;
+                else if (formData.service.includes('Premium')) price = 120;
+                else if (formData.service.includes('Ceramic')) price = 300;
+                
+                // Show confirmation (in real app, send to server)
+                alert(`Thank you, ${formData.name}!\n\n` +
+                      `Your ${formData.service} for your ${formData.carType} is booked for:\n` +
+                      `${formData.date} at ${formData.time}\n\n` +
+                      `Total: $${price}\n\n` +
+                      `We'll arrive at:\n${formData.address}\n\n` +
+                      `A confirmation has been sent to ${formData.email}`);
+                
+                // Reset form
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
