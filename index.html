@@ -260,10 +260,14 @@
     <div class="container">
         <h1>Book Your Mobile Detailing Service</h1>
         
-        <div id="service-selection">
+        <form id="service-selection" action="https://formspree.io/f/mnndqvpp" method="POST">
+            <input type="hidden" id="final-price" name="final-price" value="0">
+            <input type="hidden" id="selected-service" name="service" value="interior">
+            <input type="hidden" id="selected-addons" name="addons" value="">
+            
             <div class="form-group">
                 <label>Vehicle Type</label>
-                <select id="vehicle-type" required>
+                <select id="vehicle-type" name="vehicle-type" required>
                     <option value="" disabled selected>Select your vehicle</option>
                     <option value="sedan">Sedan</option>
                     <option value="suv">SUV</option>
@@ -277,15 +281,15 @@
                 <label>Service Type</label>
                 <div class="radio-group">
                     <div class="radio-option">
-                        <input type="radio" id="interior" name="service" value="interior" checked>
+                        <input type="radio" id="interior" name="service-type" value="interior" checked>
                         <label for="interior">Interior Only</label>
                     </div>
                     <div class="radio-option">
-                        <input type="radio" id="exterior" name="service" value="exterior">
+                        <input type="radio" id="exterior" name="service-type" value="exterior">
                         <label for="exterior">Exterior Only</label>
                     </div>
                     <div class="radio-option">
-                        <input type="radio" id="both" name="service" value="both">
+                        <input type="radio" id="both" name="service-type" value="both">
                         <label for="both">Both</label>
                     </div>
                 </div>
@@ -295,15 +299,15 @@
                 <label>Add-On Services ($)</label>
                 <div class="checkbox-group">
                     <div class="checkbox-option">
-                        <input type="checkbox" id="pet-hair" name="addons" value="pet-hair">
+                        <input type="checkbox" id="pet-hair" name="pet-hair" value="Pet Hair Removal (+25)">
                         <label for="pet-hair">Pet Hair Removal (+25)</label>
                     </div>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="engine-bay" name="addons" value="engine-bay">
+                        <input type="checkbox" id="engine-bay" name="engine-bay" value="Engine Bay Cleaning (+30)">
                         <label for="engine-bay">Engine Bay Cleaning (+30)</label>
                     </div>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="headlight" name="addons" value="headlight">
+                        <input type="checkbox" id="headlight" name="headlight" value="Paint Decontamination (+40)">
                         <label for="headlight">Paint Decontamination (+40)</label>
                     </div>
                 </div>
@@ -313,8 +317,8 @@
                 Total Estimate: <span id="total-price">$0</span>
             </div>
             
-            <button id="show-calendly" class="btn">Select Appointment Time</button>
-        </div>
+            <button type="button" id="show-calendly" class="btn">Select Appointment Time</button>
+        </form>
         
         <div id="calendly-embed">
             <!-- Calendly inline widget begin -->
@@ -355,10 +359,13 @@
         const serviceSelection = document.getElementById('service-selection');
         const showCalendlyBtn = document.getElementById('show-calendly');
         const vehicleTypeSelect = document.getElementById('vehicle-type');
-        const serviceRadios = document.querySelectorAll('input[name="service"]');
-        const addOnCheckboxes = document.querySelectorAll('input[name="addons"]');
+        const serviceRadios = document.querySelectorAll('input[name="service-type"]');
+        const addOnCheckboxes = document.querySelectorAll('input[type="checkbox"]');
         const totalPriceElement = document.getElementById('total-price');
         const calendlyEmbed = document.getElementById('calendly-embed');
+        const finalPriceInput = document.getElementById('final-price');
+        const selectedServiceInput = document.getElementById('selected-service');
+        const selectedAddonsInput = document.getElementById('selected-addons');
         
         // Calculate and update price
         function updatePrice() {
@@ -377,14 +384,19 @@
             }
             
             // Add add-on prices
+            let addons = [];
             addOnCheckboxes.forEach(checkbox => {
-                if (checkbox.checked && pricingConfig.addOnPrices[checkbox.value]) {
-                    totalPrice += pricingConfig.addOnPrices[checkbox.value];
+                if (checkbox.checked && pricingConfig.addOnPrices[checkbox.id]) {
+                    totalPrice += pricingConfig.addOnPrices[checkbox.id];
+                    addons.push(checkbox.name + ': ' + checkbox.value);
                 }
             });
             
             // Update display
             totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+            finalPriceInput.value = totalPrice.toFixed(2);
+            selectedServiceInput.value = selectedService;
+            selectedAddonsInput.value = addons.join(', ');
         }
         
         // Event listeners for form changes
@@ -399,24 +411,41 @@
                 return;
             }
             
-            serviceSelection.style.display = 'none';
-            calendlyEmbed.style.display = 'block';
-            
-            // Scroll to Calendly section
-            calendlyEmbed.scrollIntoView({ behavior: 'smooth' });
-            
-            // Initialize Calendly widget if not already loaded
-            if (typeof Calendly !== 'undefined') {
-                Calendly.initInlineWidget({
-                    url: 'https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1',
-                    parentElement: document.getElementById('calendly-embed'),
-                    prefill: {
-                        name: '',
-                        email: '',
-                        phone: ''
+            // Submit the form data to Formspree
+            fetch(serviceSelection.action, {
+                method: 'POST',
+                body: new FormData(serviceSelection),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Hide form and show Calendly
+                    serviceSelection.style.display = 'none';
+                    calendlyEmbed.style.display = 'block';
+                    
+                    // Scroll to Calendly section
+                    calendlyEmbed.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Initialize Calendly widget if not already loaded
+                    if (typeof Calendly !== 'undefined') {
+                        Calendly.initInlineWidget({
+                            url: 'https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1',
+                            parentElement: document.getElementById('calendly-embed'),
+                            prefill: {
+                                name: '',
+                                email: '',
+                                phone: ''
+                            }
+                        });
                     }
-                });
-            }
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch(error => {
+                console.error('Error submitting form:', error);
+                alert('There was an error submitting your details. Please try again.');
+            });
         });
         
         // Initialize price display
