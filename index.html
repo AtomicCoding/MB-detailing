@@ -2,454 +2,694 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    <title>MB Detailing - Professional Mobile Car Detailing</title>
-    <link rel="icon" type="image/png" href="https://i.imgur.com/LyQLRZN.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB Detailing | Professional Mobile Car Detailing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset & Base Styles */
+        /* CSS Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
         body {
-            background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-color: #f8f9fa;
-            color: #333;
+            font-family: 'Lato', sans-serif;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 100%;
-            overflow-x: hidden;
-            position: relative;
+            color: #333;
+            background-color: #f9f9f9;
         }
         
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.85);
-            z-index: -1;
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1a3e72;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #0d2a4d;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background-color: #f8c537;
+            color: #1a3e72;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e6b420;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .text-center {
+            text-align: center;
         }
         
         /* Header Styles */
         header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
-            margin-bottom: 30px;
-            border-bottom: 1px solid rgb(255, 255, 255);
+            padding: 20px 0;
         }
         
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo-img {
-            height: 0px;
-            width: 0px;
-            border-radius: 0px;
-            background-color: #fff;
-            padding: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* Replace with your logo image */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233498db"/><text x="50%" y="50%" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="white">MB</text></svg>');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .logo-text {
+        .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #2c3e50;
-        }
-        
-        .phone {
-            font-size: 18px;
-            font-weight: 600;
-            color: #3498db;
+            color: #1a3e72;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 8px 15px;
-            border-radius: 30px;
-            transition: all 0.3s;
         }
         
-        .phone:hover {
-            background: #3498db;
+        .logo span {
+            color: #f8c537;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #1a3e72;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
             color: white;
-        }
-        
-        /* Main Content Styles */
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-            padding: 25px;
-            animation: fadeIn 0.5s ease-out;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        h1 {
             text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
             margin-bottom: 20px;
-            color: #2c3e50;
-            font-size: 28px;
         }
         
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 20px;
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
         }
         
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: border 0.3s;
+        /* Services Section */
+        .services {
             background-color: white;
         }
         
-        select:focus {
-            border-color: #3498db;
-            outline: none;
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
         }
         
-        .radio-group, .checkbox-group {
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a3e72;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #f8c537;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: #1a3e72;
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: #f1f5f9;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            color: #1a3e72;
+            margin-bottom: 20px;
+        }
+        
+        .about-text ul {
+            margin: 20px 0;
+            list-style-position: inside;
+        }
+        
+        .about-text ul li {
+            margin-bottom: 10px;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Booking Section */
+        .booking {
+            background-color: #1a3e72;
+            color: white;
+            text-align: center;
+        }
+        
+        .booking h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .booking p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .booking-options {
             display: flex;
+            justify-content: center;
+            gap: 20px;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
         }
         
-        .radio-option, .checkbox-option {
-            flex: 1 1 calc(50% - 10px);
-            min-width: 120px;
+        /* Gallery Section */
+        .gallery {
+            background-color: white;
         }
         
-        .radio-option input, .checkbox-option input {
-            display: none;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         
-        .radio-option label, .checkbox-option label {
-            display: block;
-            padding: 12px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
+        .gallery-item {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .radio-option input:checked + label,
-        .checkbox-option input:checked + label {
-            background: #3498db;
-            color: white;
-            border-color: #3498db;
+        /* Testimonials */
+        .testimonials {
+            background-color: #f1f5f9;
         }
         
-        /* Price Display */
-        .price-display {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 25px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: #2c3e50;
-            border: 1px dashed #ddd;
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
         
-        .price-display span {
-            color: #3498db;
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        /* Button Styles */
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 6px;
+        .testimonial-card .stars {
+            color: #f8c537;
+            margin-bottom: 15px;
             font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 20px;
         }
         
-        .btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
         }
         
-        /* Calendly Integration */
-        #calendly-embed {
-            display: none;
-            margin-top: 30px;
-            animation: fadeIn 0.5s ease-out;
-            min-height: 600px;
+        .testimonial-card .author {
+            font-weight: 700;
+            color: #1a3e72;
         }
         
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(26, 62, 114, 0.9), rgba(26, 62, 114, 0.9)), url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
         }
         
-        /* Responsive Adjustments */
-        @media (max-width: 480px) {
-            .radio-option, .checkbox-option {
-                flex: 1 1 100%;
+        .cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0d2a4d;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: #f8c537;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #f8c537;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #f8c537;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
             }
             
-            header {
-                flex-direction: column;
-                gap: 10px;
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
             }
             
-            .logo-container {
-                justify-content: center;
-                width: 100%;
+            .hero h1 {
+                font-size: 36px;
             }
             
-            .phone {
-                width: 100%;
-                text-align: center;
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                color: #1a3e72;
+            }
+            
+            .header-container {
+                padding: 15px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 40px 0;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <div class="logo-img" title="MB Detailing Logo"></div>
-            <div class="logo-text">MB Detailing</div>
+        <div class="container header-container">
+            <a href="#" class="logo">MB<span>Detailing</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#booking">Book Now</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <a href="tel:747-253-4184" class="phone">747-253-4184</a>
     </header>
-    
-    <div class="container">
-        <h1>Book Your Mobile Detailing Service</h1>
-        
-        <form id="service-selection" action="https://formspree.io/f/mnndqvpp" method="POST">
-            <input type="hidden" id="final-price" name="final-price" value="0">
-            <input type="hidden" id="selected-service" name="service" value="interior">
-            <input type="hidden" id="selected-addons" name="addons" value="">
-            
-            <div class="form-group">
-                <label>Vehicle Type</label>
-                <select id="vehicle-type" name="vehicle-type" required>
-                    <option value="" disabled selected>Select your vehicle</option>
-                    <option value="sedan">Sedan</option>
-                    <option value="suv">SUV</option>
-                    <option value="hatchback">Hatchback</option>
-                    <option value="van">Van</option>
-                    <option value="truck">Truck</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label>Service Type</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="interior" name="service-type" value="interior" checked>
-                        <label for="interior">Interior Only</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="exterior" name="service-type" value="exterior">
-                        <label for="exterior">Exterior Only</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="both" name="service-type" value="both">
-                        <label for="both">Both</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Add-On Services ($)</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="pet-hair" name="pet-hair" value="Pet Hair Removal (+25)">
-                        <label for="pet-hair">Pet Hair Removal (+25)</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="engine-bay" name="engine-bay" value="Engine Bay Cleaning (+30)">
-                        <label for="engine-bay">Engine Bay Cleaning (+30)</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="headlight" name="headlight" value="Paint Decontamination (+40)">
-                        <label for="headlight">Paint Decontamination (+40)</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="price-display">
-                Total Estimate: <span id="total-price">$0</span>
-            </div>
-            
-            <button type="button" id="show-calendly" class="btn">Select Appointment Time</button>
-        </form>
-        
-        <div id="calendly-embed">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:600px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-    </div>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Professional Mobile Detailing at Your Doorstep</h1>
+            <p>We come to you - premium detailing services without the hassle. Serving the local area with showroom-quality results.</p>
+            <a href="booking.html" class="btn btn-accent">Book Your Appointment Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Premium detailing services tailored to your vehicle's needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Exterior Wash & Wax</h3>
+                        <p>Complete exterior cleaning with premium wax protection to restore shine and protect your paint.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Interior Deep Cleaning</h3>
+                        <p>Thorough interior cleaning including seats, carpets, dashboard, and all hard surfaces.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Paint Correction</h3>
+                        <p>Professional paint correction to remove swirls, scratches, and restore your vehicle's finish.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Ceramic Coating</h3>
+                        <p>Long-lasting protection with premium ceramic coatings that repel dirt and protect your paint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose MB Detailing</h2>
+                    <p>We're passionate about bringing showroom-quality detailing directly to you. Our mobile service eliminates the hassle of dropping off your vehicle while delivering exceptional results.</p>
+                    <ul>
+                        <li>Convenient mobile service - we come to you</li>
+                        <li>Eco-friendly, premium products</li>
+                        <li>Certified detailing professionals</li>
+                        <li>100% satisfaction guarantee</li>
+                        <li>Competitive pricing with no hidden fees</li>
+                    </ul>
+                    <a href="booking.html" class="btn">Book Your Consultation</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="MB Detailing Professional at Work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Detailing Service</h2>
+                <p>Ready to give your vehicle the care it deserves? Click below to book your appointment.</p>
+            </div>
+            <div class="booking-options">
+                <a href="booking.html" class="btn btn-accent">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
+                <p>See the transformation we bring to every vehicle</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/TD1Pm2WT/IMG-3347.jpg');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied clients</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"MB Detailing transformed my car! The interior looks brand new and the ceramic coating has made maintenance so much easier. Highly recommend their services!"</p>
+                    <div class="author">- Sarah J.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The convenience of mobile detailing is unbeatable. They showed up on time, did an amazing job, and my truck has never looked better. Will definitely use them again."</p>
+                    <div class="author">- Michael T.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional, thorough, and great attention to detail. My car's paint correction removed years of swirl marks. Worth every penny!"</p>
+                    <div class="author">- David L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for a Showroom Shine?</h2>
+            <p>Book your mobile detailing service today and experience the difference professional care can make for your vehicle.</p>
+            <a href="booking.html" class="btn btn-accent">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MB Detailing</h3>
+                    <p>Professional mobile detailing services bringing showroom-quality results to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+                        <li><a href="mailto:info@mbdetailing.com">info@mbdetailing.com</a></li>
+                        <li>Serving the local area</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 MB Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-        // Pricing configuration - Easy to update without coding knowledge
-        const pricingConfig = {
-            // Base prices for each vehicle type
-            vehicleBasePrices: {
-                sedan: 75,
-                suv: 85,
-                hatchback: 85,
-                van: 130,
-                truck: 100
-            },
-            
-            // Service type multipliers (applied to base price)
-            serviceMultipliers: {
-                interior: 1.0,
-                exterior: 0.8,
-                both: 1.7  // Slight discount for booking both
-            },
-            
-            // Add-on prices
-            addOnPrices: {
-                'pet-hair': 25,
-                'engine-bay': 30,
-                'headlight': 40
-            }
-        };
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').style.display = 
+                document.querySelector('nav ul').style.display === 'flex' ? 'none' : 'flex';
+        });
         
-        // DOM Elements
-        const serviceSelection = document.getElementById('service-selection');
-        const showCalendlyBtn = document.getElementById('show-calendly');
-        const vehicleTypeSelect = document.getElementById('vehicle-type');
-        const serviceRadios = document.querySelectorAll('input[name="service-type"]');
-        const addOnCheckboxes = document.querySelectorAll('input[type="checkbox"]');
-        const totalPriceElement = document.getElementById('total-price');
-        const calendlyEmbed = document.getElementById('calendly-embed');
-        const finalPriceInput = document.getElementById('final-price');
-        const selectedServiceInput = document.getElementById('selected-service');
-        const selectedAddonsInput = document.getElementById('selected-addons');
-        
-        // Calculate and update price
-        function updatePrice() {
-            const vehicleType = vehicleTypeSelect.value;
-            let selectedService = 'interior';
-            let totalPrice = 0;
-            
-            // Get selected service type
-            serviceRadios.forEach(radio => {
-                if (radio.checked) selectedService = radio.value;
-            });
-            
-            // Calculate base price if vehicle is selected
-            if (vehicleType && pricingConfig.vehicleBasePrices[vehicleType]) {
-                totalPrice = pricingConfig.vehicleBasePrices[vehicleType] * pricingConfig.serviceMultipliers[selectedService];
-            }
-            
-            // Add add-on prices
-            let addons = [];
-            addOnCheckboxes.forEach(checkbox => {
-                if (checkbox.checked && pricingConfig.addOnPrices[checkbox.id]) {
-                    totalPrice += pricingConfig.addOnPrices[checkbox.id];
-                    addons.push(checkbox.name + ': ' + checkbox.value);
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    document.querySelector('nav ul').style.display = 'none';
                 }
-            });
-            
-            // Update display
-            totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-            finalPriceInput.value = totalPrice.toFixed(2);
-            selectedServiceInput.value = selectedService;
-            selectedAddonsInput.value = addons.join(', ');
-        }
-        
-        // Event listeners for form changes
-        vehicleTypeSelect.addEventListener('change', updatePrice);
-        serviceRadios.forEach(radio => radio.addEventListener('change', updatePrice));
-        addOnCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updatePrice));
-        
-        // Show Calendly when button is clicked
-        showCalendlyBtn.addEventListener('click', function() {
-            if (!vehicleTypeSelect.value) {
-                alert('Please select your vehicle type');
-                return;
-            }
-            
-            // Submit the form data to Formspree
-            fetch(serviceSelection.action, {
-                method: 'POST',
-                body: new FormData(serviceSelection),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    // Hide form and show Calendly
-                    serviceSelection.style.display = 'none';
-                    calendlyEmbed.style.display = 'block';
-                    
-                    // Scroll to Calendly section
-                    calendlyEmbed.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Initialize Calendly widget if not already loaded
-                    if (typeof Calendly !== 'undefined') {
-                        Calendly.initInlineWidget({
-                            url: 'https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1',
-                            parentElement: document.getElementById('calendly-embed'),
-                            prefill: {
-                                name: '',
-                                email: '',
-                                phone: ''
-                            }
-                        });
-                    }
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            }).catch(error => {
-                console.error('Error submitting form:', error);
-                alert('There was an error submitting your details. Please try again.');
             });
         });
         
-        // Initialize price display
-        updatePrice();
+        // Add Font Awesome for icons
+        const faScript = document.createElement('script');
+        faScript.src = 'https://kit.fontawesome.com/your-code-here.js';
+        faScript.crossOrigin = 'anonymous';
+        document.head.appendChild(faScript);
     </script>
 </body>
 </html>
