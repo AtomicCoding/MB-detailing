@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Block unimportant pages
+Disallow: /thank-you.html
+Disallow: /coming-soon.html
+Disallow: /test-page.html
+
+# Block search engines from non-public areas
+Disallow: /includes/
+Disallow: /templates/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Block image search from indexing certain images
+User-agent: Googlebot-Image
+Disallow: /assets/images/team/
+Disallow: /assets/images/temp/
+
+# Crawl delay (if needed for server performance)
+Crawl-delay: 2
+
+# Sitemap locations
+Sitemap: https://www.mbdetailing.us/sitemap.xml
