@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17037047323"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17037047323');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Car Detailing in Ventura County | MB Detailing Blog</title>
+    <meta name="description" content="Discover why professional mobile detailing beats DIY in Ventura County. Learn about paint protection, interior sanitization, and eco-friendly services in Thousand Oaks, Westlake, and Newbury Park.">
+    <link rel="canonical" href="https://yourdomain.com/blog.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1a3e72;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #0d2a4d;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background-color: #f8c537;
+            color: #1a3e72;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e6b420;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a3e72;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #f8c537;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #1a3e72;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/4LjN44P/IMG-5376.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .blog-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .blog-hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article h2 {
+            color: #1a3e72;
+            font-size: 32px;
+            margin: 50px 0 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .article h2:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            height: 25px;
+            width: 5px;
+            background: #f8c537;
+        }
+
+        .article p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .benefit-card {
+            background: #f1f5f9;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #f8c537;
+        }
+
+        .price-table {
+            width: 100%;
+            margin: 40px 0;
+            border-collapse: collapse;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .price-table th {
+            background: #1a3e72;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .price-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .faq-section {
+            background: #f1f5f9;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .faq-section h3 {
+            color: #1a3e72;
+            margin-bottom: 20px;
+        }
+
+        .faq-section p {
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0d2a4d;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: #f8c537;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #f8c537;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #f8c537;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .article {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 50vh;
+                padding-top: 70px;
+            }
+            
+            .blog-hero h1 {
+                font-size: 36px;
+            }
+            
+            .article h2 {
+                font-size: 28px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                color: #1a3e72;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .blog-hero {
+                height: 40vh;
+            }
+            
+            .blog-hero h1 {
+                font-size: 32px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">MB<span>Detailing</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#booking">Book Now</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container blog-hero-content">
+            <h1>Why Mobile Detailing Beats DIY in Ventura County</h1>
+            <p>Expert insights from MB Detailing serving Thousand Oaks, Westlake, and Newbury Park</p>
+            <a href="index.html#booking" class="btn btn-accent">Book Your Detail Today</a>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <article class="article">
+                <h2>The Growing Demand for Mobile Detailing</h2>
+                <p>With 73% of Ventura County residents commuting daily, mobile detailing services save precious time for busy professionals in Thousand Oaks and Westlake Village. Our clients report saving an average of 3 hours per month compared to DIY washing.</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>⏱️ Time Savings</h3>
+                        <p>Average 4 hours saved per detailing session compared to DIY methods. Our mobile team comes to your home or office while you focus on more important things.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>🌱 Eco-Friendly</h3>
+                        <p>We use only 15 gallons per wash (vs 100+ gallons at home) with EPA-compliant water reclamation systems that protect Ventura County's watersheds.</p>
+                    </div>
+                </div>
+
+                <h2>Professional vs DIY Results</h2>
+                <p>Many Ventura County residents discover too late that DIY often leads to swirl marks, mold growth, and wasted money on ineffective products. Here's how we compare:</p>
+                
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>DIY Cost</th>
+                            <th>Our Price</th>
+                            <th>Time Saved</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full Interior</td>
+                            <td>$75+</td>
+                            <td>$150</td>
+                            <td>4 hours</td>
+                        </tr>
+                        <tr>
+                            <td>Premium Wash</td>
+                            <td>$20</td>
+                            <td>$65</td>
+                            <td>90 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Ceramic Coating</td>
+                            <td>N/A</td>
+                            <td>$300</td>
+                            <td>6+ hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Our Ventura County Process</h2>
+                <p>We've perfected our mobile detailing workflow specifically for local conditions:</p>
+                <ol>
+                    <li><strong>Salt air protection:</strong> Specialized treatments for vehicles in coastal Camarillo</li>
+                    <li><strong>Pollen defense:</strong> Deep cleaning solutions for Newbury Park's high pollen areas</li>
+                    <li><strong>UV-resistant wax:</strong> Protection for our 284 annual sunny days</li>
+                    <li><strong>Water-saving techniques:</strong> Compliant with all Ventura County drought regulations</li>
+                </ol>
+
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <p><strong>Q: How often should I detail my car in Ventura County?</strong><br>
+                    A: We recommend monthly washes for daily drivers and quarterly full details for optimal protection against our coastal climate.</p>
+                    
+                    <p><strong>Q: Can you service my apartment complex?</strong><br>
+                    A: Absolutely! We regularly work at The Oaks at Thousand Oaks, Westlake Village Golf Course Community, and other local complexes.</p>
+                    
+                    <p><strong>Q: What about water restrictions?</strong><br>
+                    A: Our systems use 80% less water than home washing and are fully compliant with all California drought regulations.</p>
+                </div>
+
+                <h2>Ready to Experience the Difference?</h2>
+                <p>Join hundreds of satisfied Ventura County residents who've made the switch to professional mobile detailing. Book your appointment today and receive a FREE interior refresh kit ($35 value) with any full detail package.</p>
+                
+                <a href="index.html#booking" class="btn btn-accent">Book Now</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MB Detailing</h3>
+                    <p>Ventura County's premier mobile detailing service, bringing showroom-quality results to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Thousand Oaks</li>
+                        <li>Westlake Village</li>
+                        <li>Newbury Park</li>
+                        <li>Camarillo</li>
+                        <li>Moorpark</li>
+                        <li>Simi Valley</li>
+                        <li>All Ventura County</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="tel:+17472534184">(747) 253-4184</a></li>
+                        <li><a href="mailto:mattkuzyakin244@gmail.com">mattkuzyakin244@gmail.com</a></li>
+                        <li>Available 7 Days a Week</li>
+                        <li>8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MB Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').style.display = 
+                document.querySelector('nav ul').style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    document.querySelector('nav ul').style.display = 'none';
+                }
+            });
+        });
+        
+        // Load Font Awesome for icons
+        const faScript = document.createElement('script');
+        faScript.src = 'https://kit.fontawesome.com/your-code-here.js';
+        faScript.crossOrigin = 'anonymous';
+        document.head.appendChild(faScript);
+    </script>
+</body>
+</html>
