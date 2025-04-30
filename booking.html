@@ -71,7 +71,6 @@
             background-color: #fff;
             padding: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* Replace with your logo image */
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233498db"/><text x="50%" y="50%" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="white">MB</text></svg>');
             background-size: contain;
             background-repeat: no-repeat;
@@ -192,10 +191,25 @@
             font-weight: 700;
             color: #2c3e50;
             border: 1px dashed #ddd;
+            display: none;
         }
         
-        .price-display span {
-            color: #3498db;
+        .original-price {
+            color: #e74c3c;
+            text-decoration: line-through;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .discount-text {
+            color: #27ae60;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .final-price {
+            font-size: 24px;
+            color: #2c3e50;
         }
         
         /* Button Styles */
@@ -316,14 +330,18 @@
                         <label for="engine-bay">Engine Bay Cleaning (+30)</label>
                     </div>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="headlight" name="headlight" value="Paint Decontamination (+40)">
-                        <label for="headlight">Paint Decontamination (+40)</label>
+                        <input type="checkbox" id="paint-decon" name="paint-decon" value="Paint Decontamination (+40)">
+                        <label for="paint-decon">Paint Decontamination (+40)</label>
                     </div>
                 </div>
             </div>
             
             <div class="price-display">
-                Total Estimate: <span id="total-price">$0</span>
+                <div class="original-price" id="original-price-display"></div>
+                <div class="discount-text">Special Discount: -$20</div>
+                <div class="final-price">
+                    Your Price: $<span id="total-price">0</span>
+                </div>
             </div>
             
             <button type="button" id="show-calendly" class="btn">Select Appointment Time</button>
@@ -338,127 +356,99 @@
     </div>
 
     <script>
-        // Pricing configuration - Easy to update without coding knowledge
         const pricingConfig = {
-            // Base prices for each vehicle type
             vehicleBasePrices: {
-                sedan: 65,
-                suv: 75,
-                hatchback: 75,
-                van: 125,
-                truck: 85
+                sedan: 85,
+                suv: 95,
+                hatchback: 95,
+                van: 145,
+                truck: 105
             },
             
-            // Service type multipliers (applied to base price)
             serviceMultipliers: {
                 interior: 1.0,
                 exterior: 0.8,
-                both: 1.6  // Slight discount for booking both
+                both: 1.6
             },
             
-            // Add-on prices
             addOnPrices: {
                 'pet-hair': 25,
                 'engine-bay': 30,
-                'headlight': 40
+                'paint-decon': 40
             }
         };
-        
-        // DOM Elements
-        const serviceSelection = document.getElementById('service-selection');
-        const showCalendlyBtn = document.getElementById('show-calendly');
+
+        const priceDisplay = document.querySelector('.price-display');
         const vehicleTypeSelect = document.getElementById('vehicle-type');
         const serviceRadios = document.querySelectorAll('input[name="service-type"]');
         const addOnCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+        const originalPriceDisplay = document.getElementById('original-price-display');
         const totalPriceElement = document.getElementById('total-price');
-        const calendlyEmbed = document.getElementById('calendly-embed');
         const finalPriceInput = document.getElementById('final-price');
-        const selectedServiceInput = document.getElementById('selected-service');
-        const selectedAddonsInput = document.getElementById('selected-addons');
-        
-        // Calculate and update price
+
         function updatePrice() {
             const vehicleType = vehicleTypeSelect.value;
+            if (!vehicleType) {
+                priceDisplay.style.display = 'none';
+                return;
+            }
+
             let selectedService = 'interior';
-            let totalPrice = 0;
-            
-            // Get selected service type
             serviceRadios.forEach(radio => {
                 if (radio.checked) selectedService = radio.value;
             });
-            
-            // Calculate base price if vehicle is selected
-            if (vehicleType && pricingConfig.vehicleBasePrices[vehicleType]) {
-                totalPrice = pricingConfig.vehicleBasePrices[vehicleType] * pricingConfig.serviceMultipliers[selectedService];
-            }
-            
-            // Add add-on prices
-            let addons = [];
+
+            let basePrice = pricingConfig.vehicleBasePrices[vehicleType];
+            let servicePrice = basePrice * pricingConfig.serviceMultipliers[selectedService];
+            let addOnTotal = 0;
+
             addOnCheckboxes.forEach(checkbox => {
-                if (checkbox.checked && pricingConfig.addOnPrices[checkbox.id]) {
-                    totalPrice += pricingConfig.addOnPrices[checkbox.id];
-                    addons.push(checkbox.name + ': ' + checkbox.value);
+                if (checkbox.checked) {
+                    addOnTotal += pricingConfig.addOnPrices[checkbox.id];
                 }
             });
-            
-            // Update display
-            totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-            finalPriceInput.value = totalPrice.toFixed(2);
-            selectedServiceInput.value = selectedService;
-            selectedAddonsInput.value = addons.join(', ');
+
+            const originalPrice = servicePrice + addOnTotal;
+            const finalPrice = originalPrice - 20;
+
+            originalPriceDisplay.textContent = `Original: $${originalPrice.toFixed(2)}`;
+            totalPriceElement.textContent = finalPrice.toFixed(2);
+            finalPriceInput.value = finalPrice.toFixed(2);
+            priceDisplay.style.display = 'block';
         }
-        
-        // Event listeners for form changes
+
+        // Event Listeners
         vehicleTypeSelect.addEventListener('change', updatePrice);
         serviceRadios.forEach(radio => radio.addEventListener('change', updatePrice));
         addOnCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updatePrice));
-        
-        // Show Calendly when button is clicked
-        showCalendlyBtn.addEventListener('click', function() {
+
+        // Calendly Integration
+        document.getElementById('show-calendly').addEventListener('click', function() {
             if (!vehicleTypeSelect.value) {
                 alert('Please select your vehicle type');
                 return;
             }
-            
-            // Submit the form data to Formspree
-            fetch(serviceSelection.action, {
+
+            fetch(document.getElementById('service-selection').action, {
                 method: 'POST',
-                body: new FormData(serviceSelection),
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: new FormData(document.getElementById('service-selection')),
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
-                    // Hide form and show Calendly
-                    serviceSelection.style.display = 'none';
-                    calendlyEmbed.style.display = 'block';
+                    document.getElementById('service-selection').style.display = 'none';
+                    document.getElementById('calendly-embed').style.display = 'block';
+                    document.getElementById('calendly-embed').scrollIntoView({ behavior: 'smooth' });
                     
-                    // Scroll to Calendly section
-                    calendlyEmbed.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Initialize Calendly widget if not already loaded
                     if (typeof Calendly !== 'undefined') {
                         Calendly.initInlineWidget({
                             url: 'https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1',
                             parentElement: document.getElementById('calendly-embed'),
-                            prefill: {
-                                name: '',
-                                email: '',
-                                phone: ''
-                            }
+                            prefill: { name: '', email: '', phone: '' }
                         });
                     }
-                } else {
-                    throw new Error('Form submission failed');
                 }
-            }).catch(error => {
-                console.error('Error submitting form:', error);
-                alert('There was an error submitting your details. Please try again.');
             });
         });
-        
-        // Initialize price display
-        updatePrice();
     </script>
 </body>
 </html>
