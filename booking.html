@@ -131,6 +131,8 @@
             color: #2c3e50;
         }
         
+        input[type="text"],
+        input[type="tel"],
         select {
             width: 100%;
             padding: 12px;
@@ -141,6 +143,8 @@
             background-color: white;
         }
         
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
         select:focus {
             border-color: #3498db;
             outline: none;
@@ -289,6 +293,11 @@
             <input type="hidden" id="selected-addons" name="addons" value="">
             
             <div class="form-group">
+                <label for="phone-number">Phone Number (Required)</label>
+                <input type="tel" id="phone-number" name="phone-number" required placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-group">
                 <label>Vehicle Type</label>
                 <select id="vehicle-type" name="vehicle-type" required>
                     <option value="" disabled selected>Select your vehicle</option>
@@ -385,6 +394,7 @@
         const originalPriceDisplay = document.getElementById('original-price-display');
         const totalPriceElement = document.getElementById('total-price');
         const finalPriceInput = document.getElementById('final-price');
+        const phoneNumberInput = document.getElementById('phone-number');
 
         function updatePrice() {
             const vehicleType = vehicleTypeSelect.value;
@@ -426,6 +436,12 @@
         document.getElementById('show-calendly').addEventListener('click', function() {
             if (!vehicleTypeSelect.value) {
                 alert('Please select your vehicle type');
+                return;
+            }
+            
+            if (!phoneNumberInput.value) {
+                alert('Please enter your phone number');
+                phoneNumberInput.focus();
                 return;
             }
 
