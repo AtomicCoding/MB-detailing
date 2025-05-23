@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Submission</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .icon {
+            font-size: 4rem;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✓</div>
+        <h1>Thank You for Your Submission!</h1>
+        <p>We've received your information and one of our representatives will be in touch with you shortly.</p>
+        <p>In the meantime, feel free to explore more about our services or check out our frequently asked questions.</p>
+        
+        <a href="/" class="btn">Return to Homepage</a>
+        
+        <div class="contact-info">
+            <p>Need immediate assistance?</p>
+            <p>Call us at: <strong>(747) 253-4184</strong></p>
+            <p>Email: <strong>mattkuzyakin244@gmail.com</strong></p>
+        </div>
+    </div>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17037047323"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17037047323');
+      
+      // Track conversion
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17037047323/your-conversion-id',
+          'value': 1.0,
+          'currency': 'USD'
+      });
+    </script>
+    
+    <script>
+        // Additional JavaScript if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add any additional tracking or functionality here
+            console.log('Thank you page loaded');
+            
+            // Example: Track time on page
+            let startTime = new Date();
+            
+            window.addEventListener('beforeunload', function() {
+                let endTime = new Date();
+                let timeSpent = (endTime - startTime) / 1000; // in seconds
+                console.log('Time spent on thank you page:', timeSpent + 's');
+                // You could send this to Google Analytics or other tracking
+            });
+        });
+    </script>
+</body>
+</html>
