@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer src="https://pixeltracker.com/pixel.js" data-site-id="9272fb00-184f-4139-9c77-d659cc85af81"></script>
+   
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -1301,6 +1301,93 @@
 
     <!-- JavaScript -->
     <script>
+(function() {
+  const siteId = '9272fb00-184f-4139-9c77-d659cc85af81';
+  if (!siteId) return;
+
+  function getVisitorId() {
+    let visitorId = localStorage.getItem('analytics_visitor_id_' + siteId);
+    if (!visitorId) {
+      visitorId = 'visitor_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+      localStorage.setItem('analytics_visitor_id_' + siteId, visitorId);
+    }
+    return visitorId;
+  }
+
+  function getDeviceType() {
+    const userAgent = navigator.userAgent;
+    if (/tablet|ipad|playbook|silk/i.test(userAgent)) return 'tablet';
+    if (/mobile|iphone|ipod|android|blackberry|opera|mini|windows\sce|palm|smartphone|iemobile/i.test(userAgent)) return 'mobile';
+    return 'desktop';
+  }
+
+  async function getClientIP() {
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      return data.ip;
+    } catch (error) {
+      return '127.0.0.1';
+    }
+  }
+
+  async function sendAnalytics(data) {
+    try {
+      const response = await fetch('https://okeynxkrflnhustncpul.supabase.co/rest/v1/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZXlueGtyZmxuaHVzdG5jcHVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwNTY5OTYsImV4cCI6MjA2NjYzMjk5Nn0.dcQBKnjIN4hXX55Ic66TyhL9FL-W_Pi0siXWx50UtVY',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZWUsInJlZiI6Im9rZXlueGtyZmxuaHVzdG5jcHVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwNTY5OTYsImV4cCI6MjA2NjYzMjk5Nn0.dcQBKnjIN4hXX55Ic66TyhL9FL-W_Pi0siXWx50UtVY',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          site_id: data.site_id,
+          visitor_id: data.visitor_id,
+          page_url: data.page_url,
+          referrer: data.referrer || 'Direct',
+          device_type: data.device_type,
+          user_agent: navigator.userAgent,
+          ip_address: data.ip_address,
+          country: data.country,
+          created_at: data.timestamp
+        })
+      });
+      console.log('Analytics tracked');
+    } catch (error) {
+      console.error('Analytics error:', error);
+    }
+  }
+
+  async function trackPageView() {
+    const ip = await getClientIP();
+    await sendAnalytics({
+      site_id: siteId,
+      visitor_id: getVisitorId(),
+      page_url: window.location.pathname + window.location.search,
+      referrer: document.referrer || 'Direct',
+      device_type: getDeviceType(),
+      user_agent: navigator.userAgent,
+      ip_address: ip,
+      country: null,
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', trackPageView);
+  } else {
+    trackPageView();
+  }
+
+  let currentPath = window.location.pathname;
+  setInterval(() => {
+    if (window.location.pathname !== currentPath) {
+      currentPath = window.location.pathname;
+      trackPageView();
+    }
+  }, 1000);
+})();
         // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('show');
