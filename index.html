@@ -1340,17 +1340,6 @@
             });
         });
 
-        // Track custom events
-        window.pixelTracker.track('button_click', {
-          button_name: 'signup',
-          page: window.location.pathname
-        });
-
-        // Track form submissions
-        window.pixelTracker.track('form_submit', {
-          form_type: 'contact',
-          success: true
-        });
 
         // Form submission
         const form = document.querySelector('form');
