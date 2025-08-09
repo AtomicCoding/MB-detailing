@@ -1043,7 +1043,11 @@
         .form-input:focus {
             outline: none;
             border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(26, 62, 114, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-input[multiple] {
+            min-height: 120px;
         }
         
         .form-textarea {
