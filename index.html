@@ -476,7 +476,7 @@
             overflow: hidden;
             background: linear-gradient(135deg, rgba(26, 62, 114, 0.9) 0%, rgba(13, 42, 77, 0.8) 100%), url('https://i.ibb.co/4LjN44P/IMG-5376.jpg') center/cover;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -486,7 +486,15 @@
             bottom: 0;
             background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
         }
-        
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+
         .hero-content {
             position: relative;
             z-index: 2;
@@ -494,6 +502,11 @@
             color: white;
             max-width: 900px;
             padding: 2rem;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .hero h1 {
