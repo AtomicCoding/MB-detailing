@@ -1857,20 +1857,27 @@
             });
         });
 
-        // Form submission with Facebook Pixel tracking
+        // Form submission with tracking
         const contactForm = document.getElementById('contactForm');
-        
+
         contactForm.addEventListener('submit', function(e) {
             // Track form submission with Facebook Pixel
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead');
             }
-            
+
+            // Track Google Ads conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17037047323/_UbpCJ2kjL8aEJvs8rs_'
+                });
+            }
+
             // Track with Google Analytics
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'generate_lead', {
                     'currency': 'USD',
-                    'value': 169
+                    'value': 200
                 });
             }
             
