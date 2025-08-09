@@ -653,11 +653,14 @@
         .pricing-card.featured {
             border: 2px solid var(--accent-yellow);
             transform: scale(1.05);
+            margin-top: 1rem;
+            position: relative;
+            overflow: visible;
         }
         
         .popular-badge {
             position: absolute;
-            top: -1rem;
+            top: -0.75rem;
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--accent-yellow);
@@ -667,6 +670,8 @@
             font-weight: 700;
             font-size: 0.875rem;
             z-index: 10;
+            white-space: nowrap;
+            box-shadow: var(--shadow-md);
         }
         
         .pricing-header {
@@ -1332,7 +1337,7 @@
                     <div class="service-content">
                         <h3 class="service-title">Exterior Wash & Wax</h3>
                         <p class="service-description">Complete exterior cleaning with premium wax protection to restore shine and protect your paint from environmental contaminants.</p>
-                        <div class="service-price">Starting at $99</div>
+                        <div class="service-price">Starting at $140</div>
                         <a href="#contact" class="btn btn-primary">Book This Service</a>
                     </div>
                 </div>
@@ -1342,7 +1347,7 @@
                     <div class="service-content">
                         <h3 class="service-title">Interior Deep Cleaning</h3>
                         <p class="service-description">Thorough interior cleaning including seats, carpets, dashboard, and all surfaces to remove dirt, stains, and odors.</p>
-                        <div class="service-price">Starting at $169</div>
+                        <div class="service-price">Starting at $200</div>
                         <a href="#contact" class="btn btn-primary">Book This Service</a>
                     </div>
                 </div>
@@ -1352,7 +1357,7 @@
                     <div class="service-content">
                         <h3 class="service-title">Complete Detail Package</h3>
                         <p class="service-description">Full interior and exterior detailing package for a showroom-quality finish inside and out.</p>
-                        <div class="service-price">Starting at $229</div>
+                        <div class="service-price">Starting at $280</div>
                         <a href="#contact" class="btn btn-primary">Book This Service</a>
                     </div>
                 </div>
@@ -1372,7 +1377,7 @@
                 <div class="card pricing-card">
                     <div class="pricing-header">
                         <h3 class="pricing-title">Basic Detail</h3>
-                        <div class="pricing-price">$99</div>
+                        <div class="pricing-price">$140</div>
                         <p class="pricing-description">Perfect for regular maintenance</p>
                     </div>
                     <div class="pricing-body">
@@ -1392,7 +1397,7 @@
                     <div class="popular-badge">MOST POPULAR</div>
                     <div class="pricing-header">
                         <h3 class="pricing-title">Premium Detail</h3>
-                        <div class="pricing-price">$169</div>
+                        <div class="pricing-price">$200</div>
                         <p class="pricing-description">Best value for thorough cleaning</p>
                     </div>
                     <div class="pricing-body">
@@ -1411,7 +1416,7 @@
                 <div class="card pricing-card">
                     <div class="pricing-header">
                         <h3 class="pricing-title">Ultimate Detail</h3>
-                        <div class="pricing-price">$229</div>
+                        <div class="pricing-price">$280</div>
                         <p class="pricing-description">Showroom-quality results</p>
                     </div>
                     <div class="pricing-body">
@@ -1421,7 +1426,6 @@
                             <li>Carpet extraction</li>
                             <li>Trim restoration</li>
                             <li>Interior odor removal</li>
-                            <li>Engine bay cleaning</li>
                         </ul>
                         <a href="#contact" class="btn btn-outline">Choose Ultimate</a>
                     </div>
