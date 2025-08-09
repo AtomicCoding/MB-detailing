@@ -1,24 +1,43 @@
 User-agent: *
 Allow: /
 
-# Block unimportant pages
+# Allow important pages
+Allow: /index.html
+Allow: /blog.html
+Allow: /booking.html
+Allow: /404.html
+
+# Block unimportant or duplicate pages
 Disallow: /thank-you.html
 Disallow: /coming-soon.html
 Disallow: /test-page.html
 
-# Block search engines from non-public areas
+# Block search engines from accessing system files
 Disallow: /includes/
 Disallow: /templates/
-Disallow: /assets/js/
-Disallow: /assets/css/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
 
-# Block image search from indexing certain images
+# Allow CSS and JS for proper rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /*.css
+Allow: /*.js
+
+# Block specific file types that shouldn't be indexed
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+
+# Image search optimization
 User-agent: Googlebot-Image
-Disallow: /assets/images/team/
+Allow: /
 Disallow: /assets/images/temp/
-
-# Crawl delay (if needed for server performance)
-Crawl-delay: 2
+Disallow: /assets/images/admin/
 
 # Sitemap locations
-Sitemap: https://www.mbdetailing.us/sitemap.xml
+Sitemap: https://mbdetailing.us/sitemap.xml
+
+# Crawl delay for server performance
+Crawl-delay: 1

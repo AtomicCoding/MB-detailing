@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - MB Detailing</title>
+    <meta name="description" content="The page you're looking for could not be found. Return to MB Detailing for premium mobile car detailing services in Ventura County.">
+    <link rel="canonical" href="https://mbdetailing.us/404.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/rRkvXz7D/IMG-5481.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <style>
+        /* Modern CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* CSS Variables */
+        :root {
+            --primary-blue: #1a3e72;
+            --secondary-blue: #0d2a4d;
+            --accent-yellow: #f8c537;
+            --accent-yellow-hover: #e6b420;
+            --text-dark: #1a202c;
+            --text-gray: #4a5568;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border-light: #e2e8f0;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius-lg: 0.75rem;
+            --transition-normal: 0.3s ease-in-out;
+        }
+        
+        /* Typography */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        h1, h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: clamp(3rem, 8vw, 8rem);
+            color: var(--primary-blue);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        /* Button Component */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius-lg);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            white-space: nowrap;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* 404 Container */
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-yellow) 100%);
+        }
+        
+        .error-number {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            color: var(--accent-yellow);
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .suggestions {
+            margin: 2rem 0;
+            text-align: left;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            border-left: 4px solid var(--accent-yellow);
+        }
+        
+        .suggestions h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .suggestions li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .suggestions li::before {
+            content: '\f061';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--accent-yellow);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .suggestions a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-normal);
+        }
+        
+        .suggestions a:hover {
+            color: var(--secondary-blue);
+            text-decoration: underline;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .error-container {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .error-container {
+                padding: 2rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 1.5rem;
+            }
+            
+            .suggestions {
+                text-align: center;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-number">
+            <div class="error-icon">
+                <i class="fas fa-car-crash"></i>
+            </div>
+            <h1>404</h1>
+        </div>
+        
+        <h2>Oops! Page Not Found</h2>
+        <p>It looks like this page took a detour and got lost. Don't worry though – we'll help you get back on track!</p>
+        
+        <div class="suggestions">
+            <h3>Here's what you can do:</h3>
+            <ul>
+                <li><a href="/">Visit our homepage</a></li>
+                <li><a href="/#services">Browse our services</a></li>
+                <li><a href="/#pricing">Check our pricing</a></li>
+                <li><a href="/#gallery">View our work gallery</a></li>
+                <li><a href="/#contact">Contact us directly</a></li>
+            </ul>
+        </div>
+        
+        <div class="error-actions">
+            <a href="/" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Go Home
+            </a>
+            <a href="/#contact" class="btn btn-outline">
+                <i class="fas fa-envelope"></i>
+                Contact Us
+            </a>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-light);">
+            Need immediate assistance? Call us at 
+            <a href="tel:7472534184" style="color: var(--primary-blue); font-weight: 600; text-decoration: none;">
+                (747) 253-4184
+            </a>
+        </p>
+    </div>
+    
+    <script>
+        // Track 404 page views for analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: '404 - Page Not Found',
+                page_location: window.location.href
+            });
+        }
+        
+        // Add some interactivity
+        document.querySelector('.error-icon').addEventListener('click', function() {
+            this.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        });
+        
+        // Check if user came from our site and suggest going back
+        if (document.referrer && document.referrer.includes(window.location.hostname)) {
+            const backButton = document.createElement('a');
+            backButton.href = 'javascript:history.back()';
+            backButton.className = 'btn btn-outline';
+            backButton.innerHTML = '<i class="fas fa-arrow-left"></i> Go Back';
+            backButton.style.marginTop = '1rem';
+            
+            const actions = document.querySelector('.error-actions');
+            actions.appendChild(backButton);
+        }
+    </script>
+</body>
+</html>
