@@ -28,8 +28,8 @@
         body {
             font-family: 'Lato', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #ffffff;
+            background-color: #000000;
         }
         
         h1, h2, h3, h4 {
@@ -49,7 +49,7 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #1a3e72;
+            background-color: #000000;
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -61,22 +61,22 @@
         }
         
         .btn:hover {
-            background-color: #0d2a4d;
+            background-color: #333333;
             transform: translateY(-2px);
         }
         
         .btn-accent {
-            background-color: #f8c537;
-            color: #1a3e72;
+            background-color: #FFD700;
+            color: #000000;
         }
         
         .btn-accent:hover {
-            background-color: #e6b420;
+            background-color: #FFCC00;
         }
 
         /* Header Styles */
         header {
-            background-color: white;
+            background-color: #000000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
@@ -93,12 +93,12 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #1a3e72;
+            color: #ffffff;
             text-decoration: none;
         }
         
         .logo span {
-            color: #f8c537;
+            color: #FFD700;
         }
         
         nav ul {
@@ -112,13 +112,13 @@
         
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
         nav ul li a:hover {
-            color: #1a3e72;
+            color: #FFD700;
         }
         
         .mobile-menu-btn {
@@ -131,7 +131,7 @@
 
         /* Blog Hero */
         .blog-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/4LjN44P/IMG-5376.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/W40d6yHX/IMG-5483.jpg') no-repeat center center/cover;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -158,7 +158,7 @@
         /* Blog Content */
         .blog-content {
             padding: 80px 0;
-            background: white;
+            background: #000000;
         }
 
         .article {
@@ -167,7 +167,7 @@
         }
 
         .article h2 {
-            color: #1a3e72;
+            color: #ffffff;
             font-size: 32px;
             margin: 50px 0 20px;
             position: relative;
@@ -181,7 +181,7 @@
             top: 12px;
             height: 25px;
             width: 5px;
-            background: #f8c537;
+            background: #FFD700;
         }
 
         .article p {
@@ -198,10 +198,11 @@
         }
 
         .benefit-card {
-            background: #f1f5f9;
+            background: #333333;
             padding: 30px;
             border-radius: 8px;
-            border-left: 4px solid #f8c537;
+            border-left: 4px solid #FFD700;
+            color: #ffffff;
         }
 
         .price-table {
@@ -212,7 +213,7 @@
         }
 
         .price-table th {
-            background: #1a3e72;
+            background: #000000;
             color: white;
             padding: 15px;
             text-align: left;
@@ -220,22 +221,25 @@
 
         .price-table td {
             padding: 15px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #333;
+            background: #000000;
+            color: #ffffff;
         }
 
         .price-table tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #333333;
         }
 
         .faq-section {
-            background: #f1f5f9;
+            background: #333333;
             padding: 40px;
             margin: 40px 0;
             border-radius: 8px;
+            color: #ffffff;
         }
 
         .faq-section h3 {
-            color: #1a3e72;
+            color: #ffffff;
             margin-bottom: 20px;
         }
 
@@ -243,9 +247,224 @@
             margin-bottom: 15px;
         }
 
+        /* Blog Posts Section */
+        .blog-posts-section {
+            background-color: #333333;
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            color: #ffffff;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section-header p {
+            color: #cccccc;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .blog-post-card {
+            background-color: #000000;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .blog-post-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+            border-color: #FFD700;
+        }
+
+        .blog-post-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .blog-post-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .blog-post-content {
+            padding: 25px;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .blog-date {
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        .blog-category {
+            background-color: #FFD700;
+            color: #000000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .blog-post-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-post-card p {
+            color: #cccccc;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more-btn {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            color: #FFCC00;
+        }
+
+        .blog-cta {
+            text-align: center;
+            background-color: #000000;
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #FFD700;
+        }
+
+        .blog-cta h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .blog-cta p {
+            color: #cccccc;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        /* Blog Expanded Content Styles */
+        .blog-expanded-content {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #FFD700;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .blog-expanded-content h4 {
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            line-height: 1.4;
+        }
+
+        .blog-expanded-content p {
+            color: #cccccc;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .blog-expanded-content ul {
+            margin: 15px 0 20px 20px;
+            color: #cccccc;
+        }
+
+        .blog-expanded-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .blog-expanded-content strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .read-more-btn.expanded {
+            color: #FFCC00;
+        }
+
+        .read-more-btn.expanded::after {
+            content: " ▲";
+            margin-left: 5px;
+        }
+
+        .read-more-btn:not(.expanded)::after {
+            content: " ▼";
+            margin-left: 5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design for Blog Posts */
+        @media (max-width: 768px) {
+            .blog-posts-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .blog-post-image {
+                height: 200px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .blog-cta {
+                padding: 30px 20px;
+            }
+        }
+
         /* Footer Styles */
         footer {
-            background-color: #0d2a4d;
+            background-color: #000000;
             color: white;
             padding: 50px 0 20px;
         }
@@ -258,7 +477,7 @@
         }
         
         .footer-column h3 {
-            color: #f8c537;
+            color: #FFD700;
             margin-bottom: 20px;
             font-size: 20px;
         }
@@ -278,7 +497,7 @@
         }
         
         .footer-column ul li a:hover {
-            color: #f8c537;
+            color: #FFD700;
         }
         
         .social-links {
@@ -294,7 +513,7 @@
         }
         
         .social-links a:hover {
-            color: #f8c537;
+            color: #FFD700;
         }
         
         .copyright {
@@ -332,7 +551,7 @@
             
             .mobile-menu-btn {
                 display: block;
-                color: #1a3e72;
+                color: #ffffff;
             }
         }
         
@@ -374,7 +593,7 @@
         <div class="container blog-hero-content">
             <h1>Why Mobile Detailing Beats DIY in Ventura County</h1>
             <p>Expert insights from MB Detailing serving Thousand Oaks, Westlake, and Newbury Park</p>
-            <a href="index.html#booking" class="btn btn-accent">Book Your Detail Today</a>
+            <a href="index.html#contact" class="btn">Get Free Quote</a>
         </div>
     </section>
 
@@ -459,6 +678,565 @@
         </div>
     </section>
 
+    <!-- More Blog Posts Section -->
+    <section class="blog-posts-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>More Car Care Insights</h2>
+                <p>Expert tips and insights from MB Detailing professionals</p>
+            </div>
+
+            <div class="blog-posts-grid">
+                <article class="blog-post-card">
+                    <div class="blog-post-image" style="background-image: url('https://i.ibb.co/gL7tSpzK/IMG-5484.png');"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-date">March 15, 2024</span>
+                            <span class="blog-category">Car Care</span>
+                        </div>
+                        <h3>Ceramic Coating vs Traditional Wax: What's Better for Ventura County Weather?</h3>
+                        <p>Discover the pros and cons of ceramic coating versus traditional wax for vehicles in Ventura County's unique climate. Learn which option provides better protection against UV rays, ocean salt, and seasonal weather changes.</p>
+                        <a href="#" class="read-more-btn" data-post="ceramic-coating">Read More</a>
+
+                        <div class="blog-expanded-content" id="ceramic-coating" style="display: none;">
+                            <h4>Understanding Ventura County's Unique Climate Challenges</h4>
+                            <p>Living in Ventura County means your vehicle faces unique environmental challenges. From the intense UV radiation in Thousand Oaks to the ocean salt spray affecting coastal areas like Ventura and Oxnard, your car's paint and finish endure constant assault from the elements.</p>
+
+                            <h4>Ceramic Coating: The Premium Protection Solution</h4>
+                            <p><strong>Ceramic coating</strong> represents the pinnacle of automotive paint protection technology. This liquid polymer chemically bonds with your vehicle's paint, creating a protective layer that's significantly harder and more durable than traditional wax.</p>
+
+                            <p><strong>Benefits for Ventura County vehicles:</strong></p>
+                            <ul>
+                                <li><strong>UV Protection:</strong> Ceramic coating blocks 99% of harmful UV rays, preventing paint fade and oxidation common in our sunny climate</li>
+                                <li><strong>Salt Resistance:</strong> Essential for vehicles near the coast, ceramic coating resists salt corrosion and mineral deposits</li>
+                                <li><strong>Longevity:</strong> Lasts 2-5 years with proper maintenance, ideal for busy professionals in Westlake Village and Calabasas</li>
+                                <li><strong>Hydrophobic Properties:</strong> Water beads off the surface, making washing easier and reducing water spots</li>
+                                <li><strong>Chemical Resistance:</strong> Protects against bird droppings, tree sap, and road chemicals</li>
+                            </ul>
+
+                            <h4>Traditional Wax: The Classic Choice</h4>
+                            <p><strong>Traditional car wax</strong> has been protecting vehicles for decades and remains a viable option for many Ventura County car owners.</p>
+
+                            <p><strong>Advantages of traditional wax:</strong></p>
+                            <ul>
+                                <li><strong>Cost-Effective:</strong> Significantly less expensive than ceramic coating</li>
+                                <li><strong>Easy Application:</strong> Can be applied by most car enthusiasts</li>
+                                <li><strong>Warm Glow:</strong> Provides that classic deep, warm shine many prefer</li>
+                                <li><strong>Forgiving:</strong> Mistakes during application are easily corrected</li>
+                            </ul>
+
+                            <p><strong>Limitations in our climate:</strong></p>
+                            <ul>
+                                <li><strong>Frequent Reapplication:</strong> Needs renewal every 2-3 months in Southern California sun</li>
+                                <li><strong>Heat Sensitivity:</strong> Can soften and reduce effectiveness in high temperatures</li>
+                                <li><strong>Limited Protection:</strong> Less effective against salt, chemicals, and UV damage</li>
+                            </ul>
+
+                            <h4>Our Professional Recommendation</h4>
+                            <p>For Ventura County residents, we typically recommend ceramic coating for:</p>
+                            <ul>
+                                <li>Newer vehicles (less than 3 years old)</li>
+                                <li>High-end or luxury cars</li>
+                                <li>Vehicles exposed to harsh conditions (coastal areas, daily outdoor parking)</li>
+                                <li>Owners seeking long-term paint protection</li>
+                            </ul>
+
+                            <p>Traditional wax works well for:</p>
+                            <ul>
+                                <li>Older vehicles where maximum protection isn't cost-effective</li>
+                                <li>Budget-conscious car owners</li>
+                                <li>Classic cars that benefit from traditional aesthetics</li>
+                                <li>Vehicles primarily garage-kept</li>
+                            </ul>
+
+                            <p><strong>Ready to protect your investment?</strong> Our mobile detailing team serves Thousand Oaks, Westlake Village, Simi Valley, and surrounding areas. Contact MB Detailing today for a free consultation and quote on ceramic coating or premium wax services tailored to your vehicle's needs.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post-card">
+                    <div class="blog-post-image" style="background-image: url('https://i.ibb.co/Dfc0fvFC/IMG-5486.png');"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-date">March 10, 2024</span>
+                            <span class="blog-category">Interior Care</span>
+                        </div>
+                        <h3>How to Maintain Your Car's Interior Between Professional Details</h3>
+                        <p>Simple tips and tricks to keep your vehicle's interior looking fresh between professional mobile detailing appointments. From protecting leather seats to maintaining that new car smell.</p>
+                        <a href="#" class="read-more-btn" data-post="interior-maintenance">Read More</a>
+
+                        <div class="blog-expanded-content" id="interior-maintenance" style="display: none;">
+                            <h4>Weekly Interior Maintenance Routine</h4>
+                            <p>Maintaining your vehicle's interior between professional detailing appointments doesn't have to be complicated. With the right approach, Ventura County residents can keep their cars looking showroom-fresh while extending the life of professional detailing services.</p>
+
+                            <h4>Essential Daily Habits</h4>
+                            <p><strong>Remove items immediately:</strong> Don't let trash, receipts, or personal items accumulate. The longer items sit, the more likely they are to cause stains or odors.</p>
+                            <p><strong>Use floor mats:</strong> Quality all-weather floor mats protect your carpets from Ventura County's sandy beaches and hiking trails.</p>
+                            <p><strong>Park in shade when possible:</strong> UV protection isn't just for your paint - it prevents dashboard cracking and leather fading common in Southern California.</p>
+
+                            <h4>Leather Seat Care for Ventura County Climate</h4>
+                            <p>Our hot, dry climate can be particularly harsh on leather interiors. Here's how to protect your investment:</p>
+                            <ul>
+                                <li><strong>Monthly conditioning:</strong> Use a high-quality leather conditioner to prevent cracking and fading</li>
+                                <li><strong>UV protection:</strong> Window tinting or sunshades prevent leather from drying out</li>
+                                <li><strong>Immediate spill cleanup:</strong> Blot (don't rub) spills immediately to prevent permanent staining</li>
+                                <li><strong>Regular cleaning:</strong> Use leather-specific cleaners weekly to remove oils and dirt</li>
+                            </ul>
+
+                            <h4>Fabric Seat Maintenance</h4>
+                            <p>Fabric interiors require different care but are generally more forgiving:</p>
+                            <ul>
+                                <li><strong>Vacuum weekly:</strong> Remove surface dirt before it works into the fabric</li>
+                                <li><strong>Spot treatment:</strong> Address stains immediately with fabric-safe cleaners</li>
+                                <li><strong>Fabric protection:</strong> Consider scotch-guarding after professional cleaning</li>
+                                <li><strong>Deep cleaning:</strong> Use a steam cleaner monthly for thorough sanitization</li>
+                            </ul>
+
+                            <h4>Dashboard and Trim Care</h4>
+                            <p>Ventura County's intense sun can wreak havoc on plastic and vinyl surfaces:</p>
+                            <ul>
+                                <li><strong>UV protectant:</strong> Apply weekly to prevent cracking and fading</li>
+                                <li><strong>Dust regularly:</strong> Use microfiber cloths to trap particles without scratching</li>
+                                <li><strong>Avoid harsh chemicals:</strong> Household cleaners can damage automotive plastics</li>
+                                <li><strong>Clean air vents:</strong> Use detailing brushes to remove dust buildup</li>
+                            </ul>
+
+                            <h4>Odor Prevention and Air Quality</h4>
+                            <p>Maintaining fresh air quality is crucial in our warm climate:</p>
+                            <ul>
+                                <li><strong>Regular cabin filter replacement:</strong> Every 6 months minimum in dusty conditions</li>
+                                <li><strong>Natural odor absorbers:</strong> Activated charcoal bags work better than air fresheners</li>
+                                <li><strong>Deep cleaning schedule:</strong> Professional interior detailing every 3-4 months</li>
+                                <li><strong>Moisture control:</strong> Address any water intrusion immediately to prevent mold</li>
+                            </ul>
+
+                            <h4>When to Call the Professionals</h4>
+                            <p>While regular maintenance helps, professional interior detailing is essential for:</p>
+                            <ul>
+                                <li>Deep stain removal</li>
+                                <li>Leather restoration and protection</li>
+                                <li>Steam sanitization</li>
+                                <li>Complete carpet extraction</li>
+                                <li>Odor elimination</li>
+                            </ul>
+
+                            <p><strong>Serving Thousand Oaks, Westlake Village, and Simi Valley,</strong> MB Detailing provides comprehensive interior cleaning services that complement your maintenance routine. Schedule your next professional interior detail to keep your vehicle in pristine condition.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post-card">
+                    <div class="blog-post-image" style="background-image: url('https://i.ibb.co/TD4fcjN0/IMG-3652.jpg');"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-date">March 5, 2024</span>
+                            <span class="blog-category">Seasonal Care</span>
+                        </div>
+                        <h3>Preparing Your Car for Summer in Southern California</h3>
+                        <p>Essential car care tips for the hot Southern California summer. Learn how to protect your paint, interior, and maintain your vehicle's value during the harsh summer months.</p>
+                        <a href="#" class="read-more-btn" data-post="summer-prep">Read More</a>
+
+                        <div class="blog-expanded-content" id="summer-prep" style="display: none;">
+                            <h4>Southern California Summer Challenges</h4>
+                            <p>Summer in Ventura County brings unique challenges for vehicle owners. Temperatures regularly exceed 90°F, UV radiation is at its peak, and wildfire ash can coat vehicles overnight. Proper preparation is essential to protect your automotive investment.</p>
+
+                            <h4>Paint Protection Strategies</h4>
+                            <p><strong>UV damage prevention:</strong> The intense Southern California sun can fade paint and cause oxidation within months if unprotected.</p>
+                            <ul>
+                                <li><strong>Professional wax or ceramic coating:</strong> Essential barrier against UV radiation</li>
+                                <li><strong>Covered parking:</strong> When possible, park in shade or use car covers</li>
+                                <li><strong>Regular washing:</strong> Remove contaminants before heat bakes them into the paint</li>
+                                <li><strong>Paint sealants:</strong> Applied every 3-4 months for maximum protection</li>
+                            </ul>
+
+                            <h4>Interior Protection from Heat Damage</h4>
+                            <p>Ventura County's summer heat can cause significant interior damage:</p>
+                            <ul>
+                                <li><strong>Dashboard protection:</strong> Use UV protectants weekly to prevent cracking</li>
+                                <li><strong>Leather conditioning:</strong> Increased frequency needed in summer heat</li>
+                                <li><strong>Window tinting:</strong> Professional tinting reduces interior temperature by 15-20°</li>
+                                <li><strong>Sunshades:</strong> Essential for daily protection when parked</li>
+                                <li><strong>Fabric guards:</strong> Protect against sweat and increased wear</li>
+                            </ul>
+
+                            <h4>Cooling System Maintenance</h4>
+                            <p>Summer puts extra strain on your vehicle's cooling system:</p>
+                            <ul>
+                                <li><strong>Coolant flush:</strong> Ensure proper mixture and effectiveness</li>
+                                <li><strong>Radiator cleaning:</strong> Remove debris that reduces efficiency</li>
+                                <li><strong>Hose inspection:</strong> Heat can cause rubber deterioration</li>
+                                <li><strong>Fan operation:</strong> Test cooling fans before summer heat peaks</li>
+                            </ul>
+
+                            <h4>Tire Care in Extreme Heat</h4>
+                            <p>Hot asphalt and high temperatures affect tire performance and safety:</p>
+                            <ul>
+                                <li><strong>Pressure monitoring:</strong> Check weekly as heat increases pressure</li>
+                                <li><strong>Tread inspection:</strong> Worn tires are dangerous on hot pavement</li>
+                                <li><strong>Rotation schedule:</strong> Even wear prevents blowouts</li>
+                                <li><strong>Age consideration:</strong> Replace tires over 6 years old before summer</li>
+                            </ul>
+
+                            <h4>Air Conditioning System Preparation</h4>
+                            <p>Essential for comfort and safety in Southern California summers:</p>
+                            <ul>
+                                <li><strong>Refrigerant levels:</strong> Top off before peak season</li>
+                                <li><strong>Filter replacement:</strong> Clean air is crucial in dusty conditions</li>
+                                <li><strong>System cleaning:</strong> Remove bacteria and odors</li>
+                                <li><strong>Performance testing:</strong> Ensure adequate cooling capacity</li>
+                            </ul>
+
+                            <h4>Wildfire Season Preparations</h4>
+                            <p>Ventura County's wildfire season requires special vehicle considerations:</p>
+                            <ul>
+                                <li><strong>Air filter monitoring:</strong> Replace more frequently during fire season</li>
+                                <li><strong>Ash removal:</strong> Clean promptly to prevent paint damage</li>
+                                <li><strong>Cabin filter upgrade:</strong> HEPA filters improve air quality</li>
+                                <li><strong>Emergency kit preparation:</strong> Keep supplies in your vehicle</li>
+                            </ul>
+
+                            <h4>Professional Summer Detailing Services</h4>
+                            <p>Consider professional services for optimal summer protection:</p>
+                            <ul>
+                                <li><strong>Paint correction:</strong> Remove winter damage before protection</li>
+                                <li><strong>Ceramic coating application:</strong> Maximum UV and heat protection</li>
+                                <li><strong>Interior sanitization:</strong> Deep cleaning before hot weather</li>
+                                <li><strong>Engine bay cleaning:</strong> Improve cooling efficiency</li>
+                            </ul>
+
+                            <p><strong>Beat the heat with professional care.</strong> MB Detailing offers comprehensive summer preparation services throughout Ventura County. From Thousand Oaks to Camarillo, we'll help protect your vehicle against Southern California's demanding summer conditions.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post-card">
+                    <div class="blog-post-image" style="background-image: url('https://i.ibb.co/MDp7CxdY/IMG-2679.jpg');"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-date">February 28, 2024</span>
+                            <span class="blog-category">Paint Protection</span>
+                        </div>
+                        <h3>Paint Correction: When Your Car Needs More Than a Detail</h3>
+                        <p>Understanding when your vehicle needs paint correction services. Learn about swirl marks, scratches, and how professional paint correction can restore your car's showroom shine.</p>
+                        <a href="#" class="read-more-btn" data-post="paint-correction">Read More</a>
+
+                        <div class="blog-expanded-content" id="paint-correction" style="display: none;">
+                            <h4>Understanding Paint Imperfections</h4>
+                            <p>Even well-maintained vehicles in Ventura County develop paint imperfections over time. The combination of intense UV exposure, windblown sand, and everyday wear creates microscopic damage that dulls your vehicle's finish.</p>
+
+                            <h4>Common Paint Issues in Southern California</h4>
+                            <p><strong>Swirl marks:</strong> Those fine circular scratches visible in sunlight, often caused by improper washing or drying techniques.</p>
+                            <p><strong>Water spots:</strong> Mineral deposits from hard water that etch into the paint surface, common throughout Ventura County.</p>
+                            <p><strong>Oxidation:</strong> UV damage that causes paint to appear chalky or faded, particularly on red and black vehicles.</p>
+                            <p><strong>Scratches:</strong> From light surface marks to deeper gouges requiring professional attention.</p>
+                            <p><strong>Environmental fallout:</strong> Tree sap, bird droppings, and industrial contaminants that bond to the paint surface.</p>
+
+                            <h4>When Regular Detailing Isn't Enough</h4>
+                            <p>Standard washing and waxing can't address these issues:</p>
+                            <ul>
+                                <li><strong>Embedded contamination:</strong> When clay bar treatment reveals rough paint surface</li>
+                                <li><strong>Visible swirl marks:</strong> Especially noticeable on dark-colored vehicles</li>
+                                <li><strong>Dull appearance:</strong> When wax doesn't restore the original gloss</li>
+                                <li><strong>Uneven paint texture:</strong> Rough or bumpy feel despite regular cleaning</li>
+                                <li><strong>Previous damage:</strong> Scratches from parking lot incidents or careless washing</li>
+                            </ul>
+
+                            <h4>The Paint Correction Process</h4>
+                            <p><strong>Step 1: Paint Assessment</strong></p>
+                            <p>Professional evaluation using proper lighting to identify all imperfections and determine the appropriate correction level.</p>
+
+                            <p><strong>Step 2: Thorough Decontamination</strong></p>
+                            <p>Complete washing, clay bar treatment, and iron removal to ensure clean paint surface for correction.</p>
+
+                            <p><strong>Step 3: Multi-Stage Polishing</strong></p>
+                            <ul>
+                                <li><strong>Compounding:</strong> Removes deeper scratches and heavy oxidation</li>
+                                <li><strong>Polishing:</strong> Refines the finish and removes compound marks</li>
+                                <li><strong>Finishing:</strong> Creates maximum gloss and depth</li>
+                            </ul>
+
+                            <p><strong>Step 4: Protection Application</strong></p>
+                            <p>Wax, sealant, or ceramic coating to protect the newly corrected paint surface.</p>
+
+                            <h4>Paint Correction Levels</h4>
+                            <p><strong>Single-Stage Correction:</strong></p>
+                            <ul>
+                                <li>Removes 70-80% of defects</li>
+                                <li>Cost-effective for daily drivers</li>
+                                <li>Significant improvement in gloss and clarity</li>
+                                <li>Ideal for vehicles with light to moderate imperfections</li>
+                            </ul>
+
+                            <p><strong>Multi-Stage Correction:</strong></p>
+                            <ul>
+                                <li>Removes 90-95% of defects</li>
+                                <li>Show-quality finish</li>
+                                <li>Maximum gloss and depth</li>
+                                <li>Recommended for luxury and collector vehicles</li>
+                            </ul>
+
+                            <h4>Maintaining Corrected Paint</h4>
+                            <p>After professional paint correction, proper maintenance is crucial:</p>
+                            <ul>
+                                <li><strong>Two-bucket wash method:</strong> Prevents reintroducing swirl marks</li>
+                                <li><strong>Microfiber towels:</strong> Safer than traditional chamois</li>
+                                <li><strong>Regular protection:</strong> Wax or sealant every 3-4 months</li>
+                                <li><strong>Professional maintenance:</strong> Annual correction touch-ups as needed</li>
+                            </ul>
+
+                            <h4>Benefits of Professional Paint Correction</h4>
+                            <ul>
+                                <li><strong>Restored appearance:</strong> Return to original factory finish quality</li>
+                                <li><strong>Increased value:</strong> Properly maintained paint significantly affects resale value</li>
+                                <li><strong>Enhanced protection:</strong> Smooth surface better accepts protective coatings</li>
+                                <li><strong>Personal satisfaction:</strong> Pride in vehicle appearance</li>
+                            </ul>
+
+                            <h4>Choosing the Right Professional</h4>
+                            <p>Paint correction requires skill, experience, and proper equipment:</p>
+                            <ul>
+                                <li><strong>Training and certification:</strong> Look for IDA (International Detailing Association) certification</li>
+                                <li><strong>Proper equipment:</strong> Professional-grade polishers and products</li>
+                                <li><strong>Portfolio review:</strong> Before and after photos of previous work</li>
+                                <li><strong>Local expertise:</strong> Understanding of regional environmental challenges</li>
+                            </ul>
+
+                            <p><strong>Transform your vehicle's appearance</strong> with professional paint correction from MB Detailing. Serving Ventura County with mobile paint correction services that restore your car's showroom shine. Contact us for a free paint assessment and discover what professional correction can do for your vehicle.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post-card">
+                    <div class="blog-post-image" style="background-image: url('https://i.ibb.co/v43yN9ht/IMG-2894-2.jpg');"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-date">February 20, 2024</span>
+                            <span class="blog-category">Business</span>
+                        </div>
+                        <h3>Why Mobile Detailing is Perfect for Busy Professionals</h3>
+                        <p>How mobile car detailing saves time and provides convenience for busy professionals in Thousand Oaks, Westlake Village, and surrounding areas. The ultimate time-saving car care solution.</p>
+                        <a href="#" class="read-more-btn" data-post="mobile-professionals">Read More</a>
+
+                        <div class="blog-expanded-content" id="mobile-professionals" style="display: none;">
+                            <h4>The Busy Professional's Dilemma</h4>
+                            <p>Ventura County professionals face unique challenges maintaining their vehicles. Between demanding work schedules, family commitments, and lengthy commutes to Los Angeles, finding time for proper car care becomes nearly impossible. Traditional car washes offer limited services, while quality detail shops require hours of waiting.</p>
+
+                            <h4>Time Savings That Add Up</h4>
+                            <p><strong>Eliminate travel time:</strong> No more driving to and from detail shops</p>
+                            <p><strong>Zero waiting:</strong> Work continues while your car is being detailed</p>
+                            <p><strong>Flexible scheduling:</strong> Services available early morning, evening, and weekends</p>
+                            <p><strong>Productivity maintenance:</strong> Use detail time for important calls or focused work</p>
+
+                            <h4>Workplace Convenience</h4>
+                            <p>Mobile detailing transforms office parking lots into personal service centers:</p>
+                            <ul>
+                                <li><strong>Corporate partnerships:</strong> Many Ventura County businesses offer mobile detailing as employee perks</li>
+                                <li><strong>Team scheduling:</strong> Coordinate with colleagues for group discounts</li>
+                                <li><strong>Professional image:</strong> Maintain pristine vehicle appearance for client meetings</li>
+                                <li><strong>Stress reduction:</strong> One less task on your overwhelming to-do list</li>
+                            </ul>
+
+                            <h4>Home Service Advantages</h4>
+                            <p>Weekend home service allows professionals to maximize family time:</p>
+                            <ul>
+                                <li><strong>Family time preservation:</strong> Spend Saturdays with loved ones, not at car washes</li>
+                                <li><strong>Multi-vehicle efficiency:</strong> Service multiple family vehicles simultaneously</li>
+                                <li><strong>Supervision opportunity:</strong> Monitor service quality from home</li>
+                                <li><strong>Secure environment:</strong> Vehicles detailed in your trusted neighborhood</li>
+                            </ul>
+
+                            <h4>Cost-Effectiveness for Professionals</h4>
+                            <p>When you value your time, mobile detailing becomes economically smart:</p>
+                            <ul>
+                                <li><strong>Hourly value calculation:</strong> Premium for professional time often exceeds mobile service cost</li>
+                                <li><strong>Fuel savings:</strong> Eliminate trips to service locations</li>
+                                <li><strong>Wear prevention:</strong> Regular maintenance prevents costly paint correction needs</li>
+                                <li><strong>Resale value:</strong> Maintained vehicles command higher prices</li>
+                            </ul>
+
+                            <h4>Service Quality Standards</h4>
+                            <p>Professional mobile detailing often exceeds traditional shop standards:</p>
+                            <ul>
+                                <li><strong>Dedicated attention:</strong> One vehicle at a time versus assembly-line processing</li>
+                                <li><strong>Premium products:</strong> Professional-grade chemicals and equipment</li>
+                                <li><strong>Customized service:</strong> Tailored to your vehicle's specific needs</li>
+                                <li><strong>Accountability:</strong> Direct relationship with service provider</li>
+                            </ul>
+
+                            <h4>Technology Integration</h4>
+                            <p>Modern mobile detailing seamlessly integrates with busy lifestyles:</p>
+                            <ul>
+                                <li><strong>Online booking:</strong> Schedule services during brief breaks</li>
+                                <li><strong>Digital communication:</strong> Updates via text or app notifications</li>
+                                <li><strong>Payment processing:</strong> Contactless transactions</li>
+                                <li><strong>Service history:</strong> Digital records of all maintenance</li>
+                            </ul>
+
+                            <h4>Environmental Responsibility</h4>
+                            <p>Mobile services often provide superior environmental stewardship:</p>
+                            <ul>
+                                <li><strong>Water conservation:</strong> Eco-friendly wash systems use 80% less water</li>
+                                <li><strong>Waste management:</strong> Proper disposal of chemicals and wastewater</li>
+                                <li><strong>Reduced emissions:</strong> Fewer trips to service locations</li>
+                                <li><strong>Green products:</strong> Biodegradable and eco-safe cleaning solutions</li>
+                            </ul>
+
+                            <h4>Seasonal Considerations for Professionals</h4>
+                            <p><strong>Summer benefits:</strong></p>
+                            <ul>
+                                <li>UV protection application before damage occurs</li>
+                                <li>Interior cooling through professional cleaning</li>
+                                <li>Wildfire ash removal service</li>
+                            </ul>
+
+                            <p><strong>Winter advantages:</strong></p>
+                            <ul>
+                                <li>Salt and road chemical removal</li>
+                                <li>Moisture elimination preventing mold</li>
+                                <li>Paint protection against harsh weather</li>
+                            </ul>
+
+                            <h4>Executive Vehicle Programs</h4>
+                            <p>Many Ventura County professionals benefit from regular maintenance programs:</p>
+                            <ul>
+                                <li><strong>Monthly service packages:</strong> Consistent vehicle appearance for client interactions</li>
+                                <li><strong>Fleet management:</strong> Multiple vehicle coordination for business owners</li>
+                                <li><strong>Priority scheduling:</strong> Guaranteed availability during busy periods</li>
+                                <li><strong>Expense management:</strong> Simplified billing for business use</li>
+                            </ul>
+
+                            <p><strong>Reclaim your time while maintaining professional excellence.</strong> MB Detailing provides premium mobile services throughout Ventura County, allowing busy professionals to maintain immaculate vehicles without sacrificing precious time. Contact us to discover how mobile detailing can simplify your life while enhancing your professional image.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post-card">
+                    <div class="blog-post-image" style="background-image: url('https://i.ibb.co/W40d6yHX/IMG-5483.jpg');"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-date">February 15, 2024</span>
+                            <span class="blog-category">Eco-Friendly</span>
+                        </div>
+                        <h3>Eco-Friendly Car Detailing: Better for You and the Environment</h3>
+                        <p>Learn about our eco-friendly car detailing practices and products. Discover how choosing professional mobile detailing helps protect the environment while keeping your car spotless.</p>
+                        <a href="#" class="read-more-btn" data-post="eco-friendly">Read More</a>
+
+                        <div class="blog-expanded-content" id="eco-friendly" style="display: none;">
+                            <h4>Environmental Impact of Traditional Car Washing</h4>
+                            <p>Traditional car washing methods have significant environmental consequences, particularly concerning in drought-prone Southern California. Understanding these impacts helps Ventura County residents make informed choices about vehicle maintenance.</p>
+
+                            <h4>Water Conservation Revolution</h4>
+                            <p><strong>Traditional washing problems:</strong></p>
+                            <ul>
+                                <li><strong>Excessive water use:</strong> Home washing uses 80-140 gallons per session</li>
+                                <li><strong>Runoff pollution:</strong> Contaminated water flows directly to storm drains</li>
+                                <li><strong>Chemical contamination:</strong> Soap and debris enter local waterways</li>
+                                <li><strong>Drought restrictions:</strong> Many areas limit residential water use</li>
+                            </ul>
+
+                            <p><strong>Eco-friendly mobile solutions:</strong></p>
+                            <ul>
+                                <li><strong>Minimal water systems:</strong> Use only 5-15 gallons per vehicle</li>
+                                <li><strong>Reclaim systems:</strong> Capture and filter all wastewater</li>
+                                <li><strong>Biodegradable products:</strong> Safe for groundwater and vegetation</li>
+                                <li><strong>Compliance guarantee:</strong> Meets all California environmental regulations</li>
+                            </ul>
+
+                            <h4>Biodegradable Product Advantages</h4>
+                            <p>Modern eco-friendly detailing products offer superior performance without environmental compromise:</p>
+                            <ul>
+                                <li><strong>Plant-based surfactants:</strong> Clean effectively while breaking down naturally</li>
+                                <li><strong>Non-toxic formulations:</strong> Safe for families, pets, and landscaping</li>
+                                <li><strong>pH-balanced solutions:</strong> Protect vehicle surfaces and surrounding environment</li>
+                                <li><strong>Concentrated formulas:</strong> Reduce packaging waste and transportation impact</li>
+                            </ul>
+
+                            <h4>Air Quality Benefits</h4>
+                            <p>Ventura County's air quality challenges make eco-friendly practices especially important:</p>
+                            <ul>
+                                <li><strong>Low-VOC products:</strong> Minimal volatile organic compound emissions</li>
+                                <li><strong>Reduced aerosols:</strong> Less atmospheric pollution from cleaning processes</li>
+                                <li><strong>No harsh fumes:</strong> Safer for technicians and nearby residents</li>
+                                <li><strong>CARB compliance:</strong> Meets California Air Resources Board standards</li>
+                            </ul>
+
+                            <h4>Sustainable Business Practices</h4>
+                            <p>Professional eco-friendly detailing encompasses more than just products:</p>
+                            <ul>
+                                <li><strong>Route optimization:</strong> Minimize fuel consumption and emissions</li>
+                                <li><strong>Equipment efficiency:</strong> Electric and battery-powered tools when possible</li>
+                                <li><strong>Waste reduction:</strong> Reusable microfiber cloths instead of disposable materials</li>
+                                <li><strong>Supply chain responsibility:</strong> Partner with environmentally conscious manufacturers</li>
+                            </ul>
+
+                            <h4>Health Benefits for Your Family</h4>
+                            <p>Eco-friendly detailing protects your family's health:</p>
+                            <ul>
+                                <li><strong>Chemical reduction:</strong> Minimize exposure to harsh automotive chemicals</li>
+                                <li><strong>Allergen-friendly:</strong> Hypoallergenic products for sensitive individuals</li>
+                                <li><strong>Interior air quality:</strong> Non-toxic cleaners improve cabin air</li>
+                                <li><strong>Skin safety:</strong> Gentle formulations prevent irritation</li>
+                            </ul>
+
+                            <h4>Cost-Effectiveness of Green Solutions</h4>
+                            <p>Eco-friendly detailing often provides economic advantages:</p>
+                            <ul>
+                                <li><strong>Concentrated products:</strong> More cleaning power per bottle</li>
+                                <li><strong>Gentle formulations:</strong> Less likely to damage vehicle surfaces</li>
+                                <li><strong>Longer-lasting results:</strong> Quality products maintain appearance longer</li>
+                                <li><strong>Regulatory compliance:</strong> Avoid fines and restrictions</li>
+                            </ul>
+
+                            <h4>Local Environmental Protection</h4>
+                            <p>Choosing eco-friendly detailing helps preserve Ventura County's natural beauty:</p>
+                            <ul>
+                                <li><strong>Ocean protection:</strong> Prevent contaminated runoff reaching coastlines</li>
+                                <li><strong>Groundwater safety:</strong> Protect local drinking water sources</li>
+                                <li><strong>Wildlife conservation:</strong> Avoid harmful chemicals affecting local ecosystems</li>
+                                <li><strong>Agricultural support:</strong> Safe for nearby farming operations</li>
+                            </ul>
+
+                            <h4>Innovation in Green Technology</h4>
+                            <p>Cutting-edge eco-friendly solutions continue evolving:</p>
+                            <ul>
+                                <li><strong>Waterless washing systems:</strong> Encapsulation technology requiring no rinse</li>
+                                <li><strong>Steam cleaning:</strong> Sanitization using only water vapor</li>
+                                <li><strong>Enzymatic cleaners:</strong> Biological solutions that break down organic matter</li>
+                                <li><strong>Solar-powered equipment:</strong> Renewable energy for mobile operations</li>
+                            </ul>
+
+                            <h4>Certification and Standards</h4>
+                            <p>Look for these environmental certifications when choosing detailing services:</p>
+                            <ul>
+                                <li><strong>Green Seal certification:</strong> Independent verification of environmental claims</li>
+                                <li><strong>EPA Safer Choice:</strong> Products meeting strict safety standards</li>
+                                <li><strong>Biodegradable certification:</strong> Verified breakdown rates and safety</li>
+                                <li><strong>Local compliance:</strong> Adherence to Ventura County water regulations</li>
+                            </ul>
+
+                            <h4>Taking Action for the Environment</h4>
+                            <p>Small changes in vehicle maintenance create significant environmental impact:</p>
+                            <ul>
+                                <li><strong>Choose certified providers:</strong> Support businesses committed to sustainability</li>
+                                <li><strong>Regular maintenance:</strong> Prevent neglect requiring harsh restoration chemicals</li>
+                                <li><strong>Educate others:</strong> Share environmental benefits with friends and colleagues</li>
+                                <li><strong>Demand transparency:</strong> Ask providers about their environmental practices</li>
+                            </ul>
+
+                            <p><strong>Protect your vehicle and the environment simultaneously.</strong> MB Detailing's eco-friendly mobile services throughout Ventura County demonstrate that superior car care and environmental responsibility go hand in hand. Contact us to learn how our green practices deliver exceptional results while protecting the beautiful environment we all call home.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-cta">
+                <h3>Want to Schedule Your Mobile Detail?</h3>
+                <p>Get professional car detailing at your location in Ventura County</p>
+                <a href="index.html#contact" class="btn">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -511,19 +1289,62 @@
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (window.innerWidth <= 768) {
-                    document.querySelector('nav ul').style.display = 'none';
+                const href = this.getAttribute('href');
+
+                // Skip if href is just "#" or invalid
+                if (href === '#' || href.length <= 1) {
+                    e.preventDefault();
+                    return;
+                }
+
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        document.querySelector('nav ul').style.display = 'none';
+                    }
                 }
             });
         });
         
+        // Read More functionality for blog posts
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const postId = this.getAttribute('data-post');
+                if (!postId) return;
+
+                const expandedContent = document.getElementById(postId);
+                if (!expandedContent) return;
+
+                const isVisible = expandedContent.style.display !== 'none';
+
+                if (isVisible) {
+                    // Hide content
+                    expandedContent.style.display = 'none';
+                    this.textContent = 'Read More';
+                    this.classList.remove('expanded');
+                } else {
+                    // Show content
+                    expandedContent.style.display = 'block';
+                    this.textContent = 'Read Less';
+                    this.classList.add('expanded');
+
+                    // Smooth scroll to content
+                    expandedContent.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }
+            });
+        });
+
         // Load Font Awesome for icons
         const faScript = document.createElement('script');
         faScript.src = 'https://kit.fontawesome.com/your-code-here.js';

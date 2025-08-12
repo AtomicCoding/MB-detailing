@@ -48,7 +48,14 @@
     <meta name="application-name" content="MB Detailing">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
-    
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://www.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: http:; connect-src 'self' https:;">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.ibb.co/rRkvXz7D/IMG-5481.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/rRkvXz7D/IMG-5481.png">
@@ -189,7 +196,7 @@
                         "name": "Basic Detail Package",
                         "description": "Mobile exterior wash & wax service"
                     },
-                    "price": "140",
+                    "price": 140,
                     "priceCurrency": "USD"
                 },
                 {
@@ -199,7 +206,7 @@
                         "name": "Premium Detail Package",
                         "description": "Interior and exterior mobile car detailing"
                     },
-                    "price": "200",
+                    "price": 200,
                     "priceCurrency": "USD"
                 },
                 {
@@ -209,17 +216,17 @@
                         "name": "Ultimate Detail Package",
                         "description": "Complete mobile car detailing service"
                     },
-                    "price": "280",
+                    "price": 280,
                     "priceCurrency": "USD"
                 }
             ]
         },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "6",
-            "bestRating": "5",
-            "worstRating": "5"
+            "ratingValue": 5,
+            "reviewCount": 6,
+            "bestRating": 5,
+            "worstRating": 1
         },
         "review": [
             {
@@ -230,10 +237,11 @@
                 },
                 "reviewRating": {
                     "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
+                    "ratingValue": 5,
+                    "bestRating": 5
                 },
-                "reviewBody": "Matt did a great job on extremely filthy car that hasn't been cleaned for over a year. Highly recommend Matt! Very professional as well"
+                "reviewBody": "Matt did a great job on extremely filthy car that hasn't been cleaned for over a year. Highly recommend Matt! Very professional as well",
+                "datePublished": "2024-02-10"
             },
             {
                 "@type": "Review",
@@ -243,10 +251,11 @@
                 },
                 "reviewRating": {
                     "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
+                    "ratingValue": 5,
+                    "bestRating": 5
                 },
-                "reviewBody": "Wonderful job detailing my 2024 BMW X3. MB Mobile Detailing arrived on time, asked about my needs and concerns. They did an amazing job."
+                "reviewBody": "Wonderful job detailing my 2024 BMW X3. MB Mobile Detailing arrived on time, asked about my needs and concerns. They did an amazing job.",
+                "datePublished": "2024-01-15"
             }
         ],
         "sameAs": [
@@ -630,7 +639,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://i.ibb.co/4LjN44P/IMG-5376.jpg') center/cover;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://i.ibb.co/v43yN9ht/IMG-2894-2.jpg') center/cover;
         }
 
         .hero::before {
@@ -1601,17 +1610,18 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="https://i.ibb.co/rRkvXz7D/IMG-5481.png" alt="MB Detailing Logo" width="48" height="48">
                 MB<span class="logo-text">Detailing</span>
             </a>
             
             <nav class="nav">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="#contact" class="nav-link">Get Quote</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
                 </ul>
                 
                 <a href="tel:7472534184" class="phone-link">
@@ -1631,7 +1641,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>MOBILE DETAILING IN VENTURA COUNTY</h1>
-                <p class="hero-subtitle">Professional mobile car detailing at your location. Get showroom-quality results with our 5-star rated service.</p>
+                <p class="hero-subtitle">Experience premium mobile car detailing services delivered directly to your location in Ventura County. Our certified technicians use professional-grade equipment and eco-friendly products to deliver showroom-quality results. From basic wash and wax to comprehensive paint correction and ceramic coating, we provide personalized automotive detailing solutions that protect your investment and enhance your vehicle's appearance. Trusted by hundreds of satisfied customers across Thousand Oaks, Westlake Village, Simi Valley, and Woodland Hills.</p>
                 
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-accent btn-lg">
@@ -1667,7 +1677,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get Your Free Quote</h2>
-                <p class="section-subtitle">Fill out the form below and we'll get back to you with a customized quote for your vehicle</p>
+                <p class="section-subtitle">Ready to experience professional mobile car detailing in Ventura County? Fill out our detailed quote form below with information about your vehicle and service preferences. Our experienced team will provide you with a customized quote based on your specific needs, vehicle size, and selected services. We offer competitive pricing and transparent communication throughout the entire process.</p>
             </div>
 
             <div class="contact-form">
@@ -1737,31 +1747,31 @@
 
                 <div class="card service-card" style="padding: 1rem;">
                     <h4 class="service-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Paint Correction</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Remove scratches and swirl marks.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Professional paint correction service removes scratches, swirl marks, and paint imperfections using advanced polishing techniques. Our expert technicians restore your vehicle's paint to its original luster and clarity.</p>
                     <a href="#contact" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Get Quote</a>
                 </div>
 
                 <div class="card service-card" style="padding: 1rem;">
                     <h4 class="service-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Ceramic Coating</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Long-lasting paint protection.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Premium ceramic coating application provides long-lasting paint protection against UV rays, contaminants, and environmental damage. Enjoy enhanced gloss and hydrophobic properties for years to come.</p>
                     <a href="#contact" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Get Quote</a>
                 </div>
 
                 <div class="card service-card" style="padding: 1rem;">
                     <h4 class="service-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Clay Bar Treatment</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Remove paint contaminants.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Clay bar treatment safely removes embedded contaminants, road grime, and industrial fallout that regular washing cannot eliminate. This process leaves your paint smooth and ready for polishing or wax application.</p>
                     <a href="#contact" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Get Quote</a>
                 </div>
 
                 <div class="card service-card" style="padding: 1rem;">
                     <h4 class="service-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Engine Bay Cleaning</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Engine cleaning and degreasing.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Comprehensive engine bay cleaning and degreasing service removes built-up grime, oil residue, and dirt. Our careful process protects sensitive components while restoring your engine bay to pristine condition.</p>
                     <a href="#contact" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Get Quote</a>
                 </div>
 
                 <div class="card service-card" style="padding: 1rem;">
                     <h4 class="service-title" style="font-size: 1rem; margin-bottom: 0.5rem;">Headlight Restoration</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Restore cloudy headlights.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Professional headlight restoration removes oxidation and yellowing from cloudy, dim headlights. Our multi-step process restores clarity and brightness, improving both appearance and nighttime visibility for safer driving.</p>
                     <a href="#contact" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Get Quote</a>
                 </div>
             </div>
@@ -1774,7 +1784,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Why Choose MB Mobile Detailing?</h2>
-                    <p>As a locally owned mobile car detailing business, we're committed to delivering showroom-quality results. Run by motivated high school students, we provide professional mobile auto detailing with the convenience of service at your location.</p>
+                    <p>As a locally owned mobile car detailing business serving Ventura County, we're committed to delivering exceptional showroom-quality results that exceed your expectations. Founded and operated by motivated high school students with a passion for automotive excellence, MB Mobile Detailing combines youthful energy with professional training and premium equipment. We understand that your vehicle is a significant investment, and our comprehensive mobile auto detailing services are designed to protect, enhance, and maintain its value.</p>
+
+                    <p>Our team brings professional-grade equipment directly to your driveway, workplace, or preferred location, saving you valuable time while delivering superior results. We use only the finest automotive products and proven techniques to ensure your vehicle receives the care it deserves. From basic maintenance washes to advanced paint correction and protection services, we tailor our approach to meet your specific needs and budget.</p>
                     
                     <ul class="about-features">
                         <li>
