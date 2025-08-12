@@ -1312,6 +1312,39 @@
             });
         });
         
+        // Read More functionality for blog posts
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const postId = this.getAttribute('data-post');
+                if (!postId) return;
+
+                const expandedContent = document.getElementById(postId);
+                if (!expandedContent) return;
+
+                const isVisible = expandedContent.style.display !== 'none';
+
+                if (isVisible) {
+                    // Hide content
+                    expandedContent.style.display = 'none';
+                    this.textContent = 'Read More';
+                    this.classList.remove('expanded');
+                } else {
+                    // Show content
+                    expandedContent.style.display = 'block';
+                    this.textContent = 'Read Less';
+                    this.classList.add('expanded');
+
+                    // Smooth scroll to content
+                    expandedContent.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }
+            });
+        });
+
         // Load Font Awesome for icons
         const faScript = document.createElement('script');
         faScript.src = 'https://kit.fontawesome.com/your-code-here.js';
