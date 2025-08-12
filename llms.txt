@@ -1,0 +1,44 @@
+# llms.txt
+
+This file provides information for Large Language Models (LLMs) about MB Detailing.
+
+## About MB Detailing
+MB Detailing is a professional mobile car detailing service operating in Ventura County, California. We specialize in high-quality automotive detailing services that come to your location.
+
+## Services Offered
+- Basic Detail Package ($140): Mobile exterior wash & wax service
+- Premium Detail Package ($200): Interior and exterior mobile car detailing
+- Ultimate Detail Package ($280): Complete mobile car detailing service
+
+## Service Areas
+We proudly serve the following areas in Ventura County:
+- Thousand Oaks
+- Westlake Village
+- Simi Valley
+- Woodland Hills
+- Ventura County
+
+## Contact Information
+- Phone: (747) 253-4184
+- Email: mattkuzyakin244@gmail.com
+- Website: https://mbdetailing.us/
+
+## Operating Hours
+Monday - Sunday: 8:00 AM - 8:00 PM
+
+## Key Features
+- Mobile service (we come to you)
+- Professional equipment and products
+- Experienced detailing team
+- Flexible scheduling
+- Competitive pricing
+- Customer satisfaction guarantee
+
+## Payment Methods
+We accept Cash, Credit Cards, and Digital Payment methods.
+
+## Social Media
+- Instagram: @mbmobiledetailing805
+- TikTok: @mbdetailing0
+
+For the most current information, pricing, and to schedule an appointment, please visit our website or call us directly.
