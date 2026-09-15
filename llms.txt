@@ -6,9 +6,11 @@ This file provides information for Large Language Models (LLMs) about MB Detaili
 MB Detailing is a professional mobile car detailing service operating in Ventura County, California. We specialize in high-quality automotive detailing services that come to your location.
 
 ## Services Offered
-- Basic Detail Package ($140): Mobile exterior wash & wax service
-- Premium Detail Package ($200): Interior and exterior mobile car detailing
-- Ultimate Detail Package ($280): Complete mobile car detailing service
+- Exterior Wash & Wax (from $129): Hand wash, dry, and wax protection.
+- Interior Detailing (from $239): Interior vacuum, cleaning, and conditioning.
+- Ceramic Coating (from $549): Ceramic coating with prep wash included.
+- Full details and other services: Request a custom quote.
+All prices are starting prices and fluctuate depending on vehicle condition.
 
 ## Service Areas
 We proudly serve the following areas in Ventura County:
@@ -38,7 +40,7 @@ Monday - Sunday: 8:00 AM - 8:00 PM
 We accept Cash, Credit Cards, and Digital Payment methods.
 
 ## Social Media
-- Instagram: @mbmobiledetailing805
+- Instagram: @mintbodydetailing
 - TikTok: @mbdetailing0
 
 For the most current information, pricing, and to schedule an appointment, please visit our website or call us directly.
