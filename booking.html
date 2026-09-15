@@ -1,470 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17037047323"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17037047323');
-</script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    <title>MBDetailing - Professional Mobile Car Detailing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request Your Detail | MB Mobile Detailing</title>
+    <meta name="description" content="Request exterior detailing from $129, interior detailing from $239, or ceramic coating from $549 with prep wash included. Serving Ventura County.">
+    <link rel="canonical" href="https://mbdetailing.us/booking.html">
     <link rel="icon" type="image/png" href="https://i.ibb.co/rRkvXz7D/IMG-5481.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17037047323"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17037047323');
+    </script>
     <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        
-        body {
-            background-image: url('https://i.ibb.co/HppQvvq6/IMG-5379.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 100%;
-            overflow-x: hidden;
-            position: relative;
-        }
-        
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.85);
-            z-index: -1;
-        }
-        
-        /* Header Styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            margin-bottom: 30px;
-            border-bottom: 1px solid rgb(255, 255, 255);
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo-img {
-            height: 0px;
-            width: 0px;
-            border-radius: 0px;
-            background-color: #fff;
-            padding: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233498db"/><text x="50%" y="50%" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="white">MB</text></svg>');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-        
-        .phone {
-            font-size: 18px;
-            font-weight: 600;
-            color: #3498db;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 8px 15px;
-            border-radius: 30px;
-            transition: all 0.3s;
-        }
-        
-        .phone:hover {
-            background: #3498db;
-            color: white;
-        }
-        
-        /* Main Content Styles */
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-            padding: 25px;
-            animation: fadeIn 0.5s ease-out;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            font-size: 28px;
-        }
-        
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        
-        input[type="text"],
-        input[type="tel"],
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: border 0.3s;
-            background-color: white;
-        }
-        
-        input[type="text"]:focus,
-        input[type="tel"]:focus,
-        select:focus {
-            border-color: #3498db;
-            outline: none;
-        }
-        
-        .radio-group, .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .radio-option, .checkbox-option {
-            flex: 1 1 calc(50% - 10px);
-            min-width: 120px;
-        }
-        
-        .radio-option input, .checkbox-option input {
-            display: none;
-        }
-        
-        .radio-option label, .checkbox-option label {
-            display: block;
-            padding: 12px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .radio-option input:checked + label,
-        .checkbox-option input:checked + label {
-            background: #3498db;
-            color: white;
-            border-color: #3498db;
-        }
-        
-        /* Price Display */
-        .price-display {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 25px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: #2c3e50;
-            border: 1px dashed #ddd;
-            display: none;
-        }
-        
-        .original-price {
-            color: #e74c3c;
-            text-decoration: line-through;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        .discount-text {
-            color: #27ae60;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        
-        .final-price {
-            font-size: 24px;
-            color: #2c3e50;
-        }
-        
-        /* Button Styles */
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 20px;
-        }
-        
-        .btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Calendly Integration */
-        #calendly-embed {
-            display: none;
-            margin-top: 30px;
-            animation: fadeIn 0.5s ease-out;
-            min-height: 600px;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 480px) {
-            .radio-option, .checkbox-option {
-                flex: 1 1 100%;
-            }
-            
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .logo-container {
-                justify-content: center;
-                width: 100%;
-            }
-            
-            .phone {
-                width: 100%;
-                text-align: center;
-            }
-        }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #f6f6f4; color: #171717; font: 16px/1.6 system-ui, sans-serif; }
+        a { color: inherit; }
+        header { background: #111; color: white; }
+        .header-inner { max-width: 1080px; margin: auto; padding: 1.25rem; display: flex; justify-content: space-between; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .brand { font-weight: 800; text-decoration: none; letter-spacing: .03em; }
+        .phone { font-weight: 600; }
+        main { max-width: 700px; margin: 2.5rem auto; padding: 0 1rem; }
+        .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+        h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: .5rem 0 1rem; }
+        h2 { line-height: 1.2; }
+        .intro { color: #555; }
+        form, .schedule-panel { padding: 2rem; background: white; border: 1px solid #ddd; border-radius: 1rem; }
+        fieldset { margin: 0 0 1.5rem; padding: 0; border: 0; min-width: 0; }
+        legend, label { display: block; font-weight: 650; margin-bottom: .5rem; }
+        .service-options { display: grid; gap: .6rem; }
+        .service-option { display: flex; gap: .75rem; align-items: center; padding: 1rem; border: 1px solid #ccc; border-radius: .6rem; cursor: pointer; margin: 0; }
+        .service-option:has(input:checked) { border: 2px solid #111; padding: calc(1rem - 1px); background: #fffce8; }
+        .service-option small { display: block; color: #555; font-weight: 400; }
+        input[type="radio"], input[type="checkbox"] { width: 1.1rem; height: 1.1rem; accent-color: #111; flex-shrink: 0; }
+        .field { margin-bottom: 1.25rem; }
+        input[type="tel"], input[type="text"], select, textarea { width: 100%; padding: .85rem; font: inherit; border: 1px solid #aaa; border-radius: .4rem; background: white; color: #111; }
+        textarea { resize: vertical; min-height: 95px; }
+        :focus-visible { outline: 3px solid #a67b00; outline-offset: 3px; }
+        .help { color: #555; font-size: .875rem; }
+        .check { display: flex; align-items: center; gap: .6rem; font-weight: 400; }
+        .summary { padding: 1.25rem; background: #f6f6f4; border-radius: .6rem; margin: 1.25rem 0; }
+        .summary strong { font-size: 1.6rem; display: block; }
+        .summary p { margin-bottom: 0; }
+        .btn { display: block; width: 100%; padding: 1rem; border: 0; border-radius: .5rem; background: #111; color: white; font: 700 1rem/1.4 system-ui, sans-serif; cursor: pointer; text-align: center; text-decoration: none; }
+        .btn:hover { background: #333; }
+        .btn:disabled { opacity: .65; cursor: wait; }
+        #booking-status { margin-top: 1rem; }
+        .contact-options { text-align: center; margin: 1.5rem 0; }
+        .contact-options a { font-weight: 650; }
+        [hidden] { display: none !important; }
+        footer { text-align: center; padding: 1rem 1rem 2rem; font-size: .9rem; }
+        @media (max-width: 480px) { form, .schedule-panel { padding: 1.25rem; } main { margin-top: 1.5rem; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <div class="logo-img" title="MB Detailing Logo"></div>
-            <div class="logo-text">MBDetailing</div>
-        </div>
-        <a href="tel:747-253-4184" class="phone">747-253-4184</a>
-    </header>
-    
-    <div class="container">
-        <h1>Book Your Mobile Detailing Service</h1>
-        <h1>20$ Off! Limited Time Sale!</h1>
-        
+    <header><div class="header-inner"><a href="index.html" class="brand">MB MOBILE DETAILING</a><a href="tel:+17472534184" class="phone">(747) 253-4184</a></div></header>
+    <main>
+        <p class="eyebrow">MOBILE DETAILING · VENTURA COUNTY</p>
+        <h1>Let’s get your car looking its best.</h1>
+        <p class="intro">Choose your service and share a few details. We’ll confirm pricing based on your vehicle’s condition. No payment required to send a request.</p>
         <form id="service-selection" action="https://formspree.io/f/mnndqvpp" method="POST">
-            <input type="hidden" id="final-price" name="final-price" value="0">
-            <input type="hidden" id="selected-service" name="service" value="interior">
-            <input type="hidden" id="selected-addons" name="addons" value="">
-            
-            <div class="form-group">
-                <label for="phone-number">Phone Number (Required)</label>
-                <input type="tel" id="phone-number" name="phone-number" required placeholder="Enter your phone number">
-            </div>
-            
-            <div class="form-group">
-                <label>Vehicle Type</label>
-                <select id="vehicle-type" name="vehicle-type" required>
-                    <option value="" disabled selected>Select your vehicle</option>
-                    <option value="sedan">Sedan</option>
-                    <option value="suv">SUV</option>
-                    <option value="hatchback">Hatchback</option>
-                    <option value="van">Van</option>
-                    <option value="truck">Truck</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label>Service Type</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="interior" name="service-type" value="interior" checked>
-                        <label for="interior">Interior Only</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="exterior" name="service-type" value="exterior">
-                        <label for="exterior">Exterior Only</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="both" name="service-type" value="both">
-                        <label for="both">Both</label>
-                    </div>
+            <input type="hidden" id="starting-price" name="starting-price" value="See selected service; personalized quote required">
+            <input type="hidden" name="pricing-note" value="Starting estimate only. Final price varies depending on vehicle condition.">
+            <fieldset>
+                <legend>Choose your service</legend>
+                <div class="service-options">
+                    <label class="service-option"><input type="radio" name="service-type" value="exterior"><span>Exterior Wash &amp; Wax — from $129<small>Hand wash, dry, and wax protection.</small></span></label>
+                    <label class="service-option"><input type="radio" name="service-type" value="interior" checked><span>Interior Detailing — from $239<small>Vacuum, cleaning, and conditioning.</small></span></label>
+                    <label class="service-option"><input type="radio" name="service-type" value="ceramic"><span>Ceramic Coating — from $549<small>Prep wash included.</small></span></label>
+                    <label class="service-option"><input type="radio" name="service-type" value="both"><span>Interior + Exterior<small>Request a custom quote for both services.</small></span></label>
                 </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Add-On Services ($)</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="pet-hair" name="pet-hair" value="Pet Hair Removal (+25)">
-                        <label for="pet-hair">Pet Hair Removal (+25)</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="engine-bay" name="engine-bay" value="Engine Bay Cleaning (+30)">
-                        <label for="engine-bay">Engine Bay Cleaning (+30)</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input type="checkbox" id="paint-decon" name="paint-decon" value="Paint Decontamination (+40)">
-                        <label for="paint-decon">Paint Decontamination (+40)</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="price-display">
-                <div class="original-price" id="original-price-display"></div>
-                <div class="discount-text">Special Discount: -$20</div>
-                <div class="final-price">
-                    Your Price: $<span id="total-price">0</span>
-                </div>
-            </div>
-            
-            <button type="button" id="show-calendly" class="btn">Select Appointment Time</button>
+            </fieldset>
+            <div class="field"><label for="phone-number">Your phone number *</label><input type="tel" id="phone-number" name="phone-number" autocomplete="tel" required placeholder="(747) 555-0123"></div>
+            <div class="field"><label for="vehicle-type">Vehicle type *</label><select id="vehicle-type" name="vehicle-type" required><option value="">Select your vehicle</option><option value="sedan">Sedan</option><option value="suv">SUV</option><option value="hatchback">Hatchback</option><option value="van">Van</option><option value="truck">Truck</option></select></div>
+            <div class="field"><label for="vehicle">Make, model, and year (optional)</label><input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2020 Honda Civic"></div>
+            <div class="field"><label for="location">City or ZIP code (optional)</label><input type="text" id="location" name="location" placeholder="Where would you like your detail?"></div>
+            <div class="field"><label for="condition">Vehicle condition / special requests (optional)</label><textarea id="condition" name="condition" placeholder="Let us know about stains, pet hair, paint condition, or your preferred day."></textarea></div>
+            <fieldset>
+                <legend>Optional add-ons</legend>
+                <label class="check"><input type="checkbox" name="addons" value="Pet Hair Removal" data-price="25">Pet Hair Removal (+$25)</label>
+                <label class="check"><input type="checkbox" name="addons" value="Engine Bay Cleaning" data-price="30">Engine Bay Cleaning (+$30)</label>
+                <label class="check"><input type="checkbox" name="addons" value="Paint Decontamination" data-price="40">Paint Decontamination (+$40)</label>
+            </fieldset>
+            <div class="summary" aria-live="polite"><span>Starting estimate</span><strong id="total-price">$239</strong><p id="prep-note" class="help" hidden>Prep wash is included with ceramic coating.</p><p class="help">Prices fluctuate depending on vehicle condition. This is an estimate; we’ll confirm your personalized quote.</p></div>
+            <button type="submit" class="btn" id="request-button">Request My Detail</button>
+            <p class="help">We’ll use these details to contact you about your request. Sending a request does not confirm an appointment.</p>
+            <noscript><p>Submit this form to request a personalized quote, or call/text (747) 253-4184.</p></noscript>
         </form>
-        
-        <div id="calendly-embed">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:600px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-    </div>
-
+        <p id="booking-status" role="status" aria-live="polite"></p>
+        <section id="schedule-panel" class="schedule-panel" hidden aria-labelledby="schedule-title">
+            <h2 id="schedule-title">Your request has been sent.</h2>
+            <p>Next, choose a preferred time on our calendar, or call/text us to arrange your detail. We’ll follow up to confirm the service, price, and appointment.</p>
+            <a class="btn" href="https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&amp;hide_gdpr_banner=1" target="_blank" rel="noopener">Choose a Preferred Time ↗</a>
+        </section>
+        <div class="contact-options">Prefer a quick conversation? <a href="sms:+17472534184">Text us photos</a> or <a href="tel:+17472534184">call (747) 253-4184</a>.</div>
+    </main>
+    <footer><a href="index.html#services">View all services</a> · <a href="https://www.instagram.com/mintbodydetailing/" target="_blank" rel="noopener">@mintbodydetailing on Instagram</a></footer>
     <script>
-        const pricingConfig = {
-            vehicleBasePrices: {
-                sedan: 85,
-                suv: 95,
-                hatchback: 95,
-                van: 145,
-                truck: 105
-            },
-            
-            serviceMultipliers: {
-                interior: 1.0,
-                exterior: 0.8,
-                both: 1.6
-            },
-            
-            addOnPrices: {
-                'pet-hair': 25,
-                'engine-bay': 30,
-                'paint-decon': 40
-            }
-        };
-
-        const priceDisplay = document.querySelector('.price-display');
-        const vehicleTypeSelect = document.getElementById('vehicle-type');
-        const serviceRadios = document.querySelectorAll('input[name="service-type"]');
-        const addOnCheckboxes = document.querySelectorAll('input[type="checkbox"]');
-        const originalPriceDisplay = document.getElementById('original-price-display');
-        const totalPriceElement = document.getElementById('total-price');
-        const finalPriceInput = document.getElementById('final-price');
-        const phoneNumberInput = document.getElementById('phone-number');
-
+        const servicePrices = { exterior: 129, interior: 239, ceramic: 549, both: null };
+        const form = document.getElementById('service-selection');
+        const serviceRadios = form.querySelectorAll('[name="service-type"]');
+        const addOns = form.querySelectorAll('[name="addons"]');
+        const selectedFromLink = new URLSearchParams(location.search).get('service');
+        serviceRadios.forEach(radio => { if (radio.value === selectedFromLink) radio.checked = true; });
         function updatePrice() {
-            const vehicleType = vehicleTypeSelect.value;
-            if (!vehicleType) {
-                priceDisplay.style.display = 'none';
-                return;
-            }
-
-            let selectedService = 'interior';
-            serviceRadios.forEach(radio => {
-                if (radio.checked) selectedService = radio.value;
-            });
-
-            let basePrice = pricingConfig.vehicleBasePrices[vehicleType];
-            let servicePrice = basePrice * pricingConfig.serviceMultipliers[selectedService];
-            let addOnTotal = 0;
-
-            addOnCheckboxes.forEach(checkbox => {
-                if (checkbox.checked) {
-                    addOnTotal += pricingConfig.addOnPrices[checkbox.id];
-                }
-            });
-
-            const originalPrice = servicePrice + addOnTotal;
-            const finalPrice = originalPrice - 20;
-
-            originalPriceDisplay.textContent = `Original: $${originalPrice.toFixed(2)}`;
-            totalPriceElement.textContent = finalPrice.toFixed(2);
-            finalPriceInput.value = finalPrice.toFixed(2);
-            priceDisplay.style.display = 'block';
+            const service = form.querySelector('[name="service-type"]:checked').value;
+            const base = servicePrices[service];
+            const extras = Array.from(addOns).reduce((sum, addon) => sum + (addon.checked ? Number(addon.dataset.price) : 0), 0);
+            document.getElementById('total-price').textContent = base === null ? 'Custom quote' : '$' + (base + extras);
+            document.getElementById('starting-price').value = base === null ? 'Custom quote' : base + extras;
+            document.getElementById('prep-note').hidden = service !== 'ceramic';
         }
-
-        // Event Listeners
-        vehicleTypeSelect.addEventListener('change', updatePrice);
-        serviceRadios.forEach(radio => radio.addEventListener('change', updatePrice));
-        addOnCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updatePrice));
-
-        // Calendly Integration
-        document.getElementById('show-calendly').addEventListener('click', function() {
-            if (!vehicleTypeSelect.value) {
-                alert('Please select your vehicle type');
-                return;
+        form.addEventListener('change', updatePrice);
+        updatePrice();
+        form.addEventListener('submit', async event => {
+            event.preventDefault();
+            updatePrice();
+            const button = document.getElementById('request-button');
+            const status = document.getElementById('booking-status');
+            button.disabled = true;
+            button.textContent = 'Sending…';
+            status.textContent = '';
+            try {
+                const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+                if (!response.ok) throw new Error('Submission failed');
+                form.hidden = true;
+                const panel = document.getElementById('schedule-panel');
+                panel.hidden = false;
+                const title = document.getElementById('schedule-title');
+                title.tabIndex = -1;
+                title.focus();
+                if (typeof gtag === 'function') gtag('event', 'conversion', { send_to: 'AW-17037047323/_UbpCJ2kjL8aEJvs8rs_' });
+            } catch (error) {
+                status.textContent = 'We couldn’t send your request. Please try again, or call/text (747) 253-4184.';
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Request My Detail';
             }
-            
-            if (!phoneNumberInput.value) {
-                alert('Please enter your phone number');
-                phoneNumberInput.focus();
-                return;
-            }
-
-            fetch(document.getElementById('service-selection').action, {
-                method: 'POST',
-                body: new FormData(document.getElementById('service-selection')),
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    document.getElementById('service-selection').style.display = 'none';
-                    document.getElementById('calendly-embed').style.display = 'block';
-                    document.getElementById('calendly-embed').scrollIntoView({ behavior: 'smooth' });
-                    
-                    if (typeof Calendly !== 'undefined') {
-                        Calendly.initInlineWidget({
-                            url: 'https://calendly.com/atomicbusiness81/30min?hide_event_type_details=1&hide_gdpr_banner=1',
-                            parentElement: document.getElementById('calendly-embed'),
-                            prefill: { name: '', email: '', phone: '' }
-                        });
-                    }
-                }
-            });
         });
     </script>
 </body>
